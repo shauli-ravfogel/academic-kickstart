@@ -6,13 +6,23 @@
 [[main]]
   name = "Home"
   url = "#about"
-  weight = 100
+  weight = 10
+
+[[main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 20
+
+[[main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 30
 
 [[main]]
   name = "Publications"
-  url = "#publication"
-  weight = 90
- 
+  url = "#featured"
+  weight = 40
+
 [[main]]
   name = "Contact"
   url = "#contact"
