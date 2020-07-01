@@ -23,7 +23,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: Langauges differ in multiple ways, such as word order and morphological complexity. We study how does this complexity interact with the ability of neural models to learn the syntax of the lagnauge. 
 
 tags: []
 categories: []
