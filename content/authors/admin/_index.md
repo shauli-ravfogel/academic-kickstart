@@ -26,6 +26,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/Shaul1321
+  - link: Daniel Nevo
+    icon: linkedin
+    icon_pack: fas
 education:
   courses:
     - course: MSc in Computer Science
@@ -42,6 +45,6 @@ user_groups:
   - Researchers
   - Visitors
 ---
-I am a second year master's student in the Natural Language Processing Lab at Bar-Ilan University, suprvised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a reserch intern in AI2 Israel.
+I am a second year master's student in the Natural Language Processing Lab at Bar-Ilan University, suprvised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a reserch intern at AI2 Israel.
 
 I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representatons that encode structured information, in the way they utillize thos representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts.
