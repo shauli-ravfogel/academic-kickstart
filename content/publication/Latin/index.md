@@ -18,12 +18,12 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Ab Antiquo: Proto-language Reconstruction with RNNs"
-publication_short: We study whether neural models can learn the systemtic patterns of language evolution, and reconstruct proto-forms based on words on existing langauges. 
+publication_short: 
 
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: We study whether neural models can learn the systemtic patterns of language evolution, and reconstruct proto-forms based on words on existing langauges. 
 
 tags: []
 categories: []
