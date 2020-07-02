@@ -38,11 +38,11 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://www.aclweb.org/anthology/N19-1356/"
-url_code:
+url_code:"https://github.com/Shaul1321/rnn_typology"
 url_dataset:
 url_poster:
 url_project:
-url_slides:
+url_slides:"https://docs.google.com/presentation/d/1MEe4RzkPc6nIazgN1oKcepP177K2GUCZtXs4tRormBU/edit?usp=sharing"
 url_source:
 url_video:
 
