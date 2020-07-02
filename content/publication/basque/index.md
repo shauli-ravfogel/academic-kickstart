@@ -23,7 +23,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: Agreement prediction has been proposed as a task that implicitly tests acquisition on syntax. We use agreement prediction to study how do the models fare in this task when trained on a language with a complex morphology: Basque.
+summary: "Agreement prediction has been proposed as a task that implicitly tests acquisition on syntax. We use agreement prediction to study how do the models fare in this task when trained on a language with a complex morphology: Basque."
 
 tags: []
 categories: []
