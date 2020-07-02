@@ -20,15 +20,18 @@ social:
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/ravfogel
+    
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=x09r-T8AAAAJ&hl=en&oi=ao
+    
   - icon: github
     icon_pack: fab
     link: https://github.com/Shaul1321
-  - link: Daniel Nevo
+    
+  - link: https://www.linkedin.com/in/shauli-ravfogel-619712130
     icon: linkedin
-    icon_pack: fas
+    icon_pack: fab
 education:
   courses:
     - course: MSc in Computer Science
