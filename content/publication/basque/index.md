@@ -4,7 +4,7 @@
 title: "Can LSTM Learn to Capture Agreement? The Case of Basque"
 authors: ["Shauli Ravfogel", "Francis M. Tyers", "Yoav Goldberg"]
                
-date: 2018
+date: 2019
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -68,4 +68,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-
