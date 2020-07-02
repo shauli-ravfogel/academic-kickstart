@@ -38,11 +38,11 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://www.aclweb.org/anthology/2020.acl-main.647/"
-url_code:
+url_code:"https://github.com/Shaul1321/nullspace_projection"
 url_dataset:
 url_poster:
 url_project:
-url_slides:
+url_slides: "https://docs.google.com/presentation/d/1Xi5HLpvvRE8BqcNBZMyPS4gBa0i0lqZvRebz-AZxAPA/edit?usp=sharing"
 url_source:
 url_video:
 
