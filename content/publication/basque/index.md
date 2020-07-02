@@ -23,7 +23,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: Langauges differ in multiple ways, such as word order and morphological complexity. We study how does this complexity interact with the ability of neural models to learn the syntax of the lagnauge. 
+summary: Agreement prediction has been proposed as a task that implicitly tests acquisition on syntax. We use agreement prediction to study how do the models fare in this task when trained on a language with a complex morphology: Basque.
 
 tags: []
 categories: []
