@@ -61,7 +61,7 @@ We begin with removing gender associations from GloVe word embeddings. Following
 
 The following animations displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
 
-![](tsne2.gif)
+![](tsne2_2.gif)
 
 Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
 
