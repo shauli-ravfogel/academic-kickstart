@@ -85,4 +85,8 @@ Interestingly, many of of the directions are interpretble: the first direction s
 
 ## What's next?
 
-We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. We see this method as a strong alternative to adversarial removal of inforamtion: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property.
+We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. We see this method as a strong alternative to adversarial removal of inforamtion: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property. 
+
+\- limitations
+
+\- hint to amnesic probing
