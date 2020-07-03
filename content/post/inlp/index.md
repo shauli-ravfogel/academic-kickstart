@@ -9,7 +9,7 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-Controlling Neural Representations by Iterative Nullsapce Projections
+**Yanai Elazar and Shauli Ravfogel**
 
 ## Calling neural models to order
 
