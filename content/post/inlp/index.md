@@ -42,8 +42,8 @@ Luckily, when using linear probes, linear algebra is equipped with a simple oper
 
 
 
-Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1.
+Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1. This is the essence of our algorithm, which we call **Iterative Nullsapce Projection (INLP)**.
 
+But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
-
-$$g = f(x)$$
+![](ezgif.com-crop.gif "\"debiasing\" deeper models: freeze the network, and apply INLP on the last hidden representation. ")
