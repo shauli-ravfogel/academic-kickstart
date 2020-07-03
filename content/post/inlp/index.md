@@ -39,3 +39,7 @@ We propose a method that generalizes the previous projection-based methods, and 
 Luckily, when using linear probes, linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1.
 
 ![](ezgif-3-657dfcbbb32f.gif "d")
+
+
+
+a
