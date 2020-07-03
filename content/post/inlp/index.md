@@ -12,7 +12,7 @@ Controlling Neural Representations by Iterative Nullsapce Projections
 
 ## Calling neural models to order
 
-Neural models are notoriously opaque. While in recent years we witnessed an array of increasingly powerful models -- from word representations to contextualized transformers -- that capture many aspects of human language, ranging from the structural aspects of syntax, to more high level semantic aspects. But what can we do if we want to make sure that something is not encoded in the model? This requirement arises in multiple scenarios. For example, we may want to have word embeddings that focus on lexical semantics, but discard the syntactic distinctions that are often encoded in the embeddings (e.g. tense); and to ensure fairness, we may want to have models that do not encode gender-related concepts.
+Neural models are notoriously opaque. While in recent years we witnessed an array of increasingly powerful models -- from word representations to contextualized transformers -- that capture many aspects of human language, ranging from the structural aspects of syntax, to more high level semantic aspects. But what can we do if we want to make sure that something is not encoded in the model? This requirement arises in multiple scenarios. For example, we may want to have word embeddings that focus on lexical semantics, but discard the syntactic distinctions that are often encoded in the embeddings (e.g. tense); and to ensure fairness, we may want to have models that do not encode gender-related concepts. 
 
 A natural way to approach this is having a preprocessing step for the training data, which eliminates the distinctions we do not want to encode: in our embedding-tense example, this can be lemmatization. While this solution is applicable in simple cases such as removing tense distinctions, it becomes much less practical when working with pretrained contextualized models, such as BERT, and when trying to eliminate more vague information such as gender distinctions. First, re-training large language models on new datasets is often impractical for standard practitioners. More importantly, it is not clear how to pre-process the training data, to remove gender distinctions: we first have to understand which parts of the input are causally responsible for the gender components in the encoding, and how to neutralize them. As we are about to see, societal concepts such as gender and race are deeply rooted in representations trained on neutral-language corpora, and are often represented in implicit and opaque ways. Naively removing gendered pronouns and first names from the training corpus does alleviate the problem, but this is far from a complete solution.
 
@@ -46,4 +46,4 @@ Empirically we find that the latent space is approximately linearly separable by
 
 
 
-$g = f(x)$
+$$g = f(x)$$
