@@ -9,6 +9,22 @@ image:
   focal_point: Smart
   preview_only: false
 ---
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+<title>Mathedemo</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+<h2>Math in TeX notation</h2>
+
 **Yanai Elazar and Shauli Ravfogel**
 
 ## Calling neural models to order
@@ -23,11 +39,9 @@ In recent years, a large body of work has shown that neural models capture subtl
 
 For word embeddings, one primary post-hoc “debiasing” method is the projection-based method of Bolukbasi et al. They aim to identify a gender direction in the embedding space, and neutralize it. Consider the direction defined as the difference between two inherently-gendered pairs, such as he-she. Subtraction of the two parallel but opposite words should leave us with a direction that supposedly (one) aspect of gender in the embedding space. We can delete the projection of each word embedding on this direction, and neutralize that aspect of gender. If one defines the gender content of an embedding as this projection, then we are done. However, Gonen and Goldberg have shown that this is not the case: even after we neutralize this direction, word vectors are still clustered very well by gender: as we are going to see, gender is encoded in multiple directions, not all of them as interpretable as the he-she direction.
 
-
-
 ![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg "Gonen and Goldberg 2019: debiasing-by-projection is not enough")
 
-When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, such in domain adaptation (cite, ganin et al.) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (e.g.  [](https://www.aclweb.org/anthology/P18-2005.pdf)[1](<https://www.aclweb.org/anthology/P18-2005.pdf>), [2](<https://www.aclweb.org/anthology/D18-1001.pdf>), [3](<http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf>)).
+When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, such in domain adaptation (cite, ganin et al.) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (e.g.  [](https://www.aclweb.org/anthology/P18-2005.pdf)[1](https://www.aclweb.org/anthology/P18-2005.pdf), [2](https://www.aclweb.org/anthology/D18-1001.pdf), [3](http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf)).
 
 However, Elazar and Goldberg have [shown](https://arxiv.org/pdf/1808.06640.pdf) that even though using adversarial training for some protected attribute, this method does not completely remove all the information through a post-hoc classifier.
 
@@ -41,15 +55,11 @@ Luckily, when using linear probes, linear algebra is equipped with a simple oper
 
 ![](ezgif-3-657dfcbbb32f.gif "Nullspace projection: a geometric look. The representation X is projected onto the nullspace of the gender classifier W, neutralizing the features it uses for gender prediction.")
 
-
-
 Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1. This is the essence of our algorithm, which we call **Iterative Nullsapce Projection (INLP)**.
 
 But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
-![](ezgif.com-crop.gif "\"debiasing\" deeper models: freeze the network, and apply INLP on the last hidden representation. ")
-
-
+![](ezgif.com-crop.gif "\\"debiasing\\" deeper models: freeze the network, and apply INLP on the last hidden representation. ")
 
 We test our method on increasingly complex settings: debiasing static word embeddings, deep binary classification and deep multiclass classification. 
 
@@ -59,11 +69,7 @@ We begin with removing gender associations from GloVe word embeddings. Following
 
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
 
-
-
 The following animations displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
-
-
 
 ![](tsne2.gif)
 
