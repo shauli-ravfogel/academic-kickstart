@@ -25,8 +25,6 @@ image:
 <body>
 <h2>Math in TeX notation $$g = f(x)$$</h2>
 
-
-
 $ g = f(x) $ 
 
 $ h = f(x) $
@@ -65,7 +63,7 @@ Empirically we find that the latent space is approximately linearly separable by
 
 But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
-![](ezgif.com-crop.gif "\\"debiasing\\" deeper models: freeze the network, and apply INLP on the last hidden representation. ")
+![](ezgif.com-crop.gif "\"debiasing\" deeper models: freeze the network, and apply INLP on the last hidden representa")
 
 We test our method on increasingly complex settings: debiasing static word embeddings, deep binary classification and deep multiclass classification. 
 
@@ -73,10 +71,18 @@ We test our method on increasingly complex settings: debiasing static word embed
 
 We begin with removing gender associations from GloVe word embeddings. Following previous works, we annotate word vectors by gender bias according to their projection on the he-she. Initially, word vectors are clustered by gender bias:
 
+### Dataset bias vs model bias
+
+Yanai - your part
+
+### Debiasing: in the wild
+
+We finalize
+
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
 
 The following animations displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
 
 ![](tsne2.gif)
 
-Finally, we used WHEAT to measure whether the transformed vectors still show undesried associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
+Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
