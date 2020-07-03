@@ -9,21 +9,7 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-
-<html>
-<head>
-<title>Mathedemo</title>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript"
-  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
-
-<body>
-<h2>Math in TeX notation $$g = f(x)$$</h2>
+<style TYPE="text/css"> code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;} </style> <script type="text/x-mathjax-config"> MathJax.Hub.Config({     tex2jax: {         inlineMath: [['$','$'], ['\\(','\\)']],         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry     } }); MathJax.Hub.Queue(function() {     var all = MathJax.Hub.getAllJax(), i;     for(i = 0; i < all.length; i += 1) {         all[i].SourceElement().parentNode.className += ' has-jax';     } }); </script> <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 $ g = f(x) $ 
 
@@ -87,4 +73,4 @@ Yanai - your part
 
 ### Debiasing: in the wild
 
-Finally, ww <img src="https://render.githubusercontent.com/render/math?math=e^{i +\pi} =x + 1"> and
+Finally, we test our method on a multiclass fair classification setting. We user the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset is composed of short biographies, divided into 28 professions and
