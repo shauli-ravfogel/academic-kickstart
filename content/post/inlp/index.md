@@ -24,7 +24,7 @@ For word embeddings, one primary post-hoc “debiasing” method is the projecti
 
 
 
-![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg)
+![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg "Gonen and Goldberg 2019: debiasing-by-projection is not enough")
 
 When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, such in domain adaptation (cite, ganin et al.) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (e.g.  [](https://www.aclweb.org/anthology/P18-2005.pdf)[\[1]](<https://www.aclweb.org/anthology/P18-2005.pdf>), [\[2]](<https://www.aclweb.org/anthology/D18-1001.pdf>), [\[3]](<http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf>)).
 
@@ -38,7 +38,7 @@ We propose a method that generalizes the previous projection-based methods, and 
 
 Luckily, when using linear probes, linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. 
 
-![](ezgif-3-657dfcbbb32f.gif "d")
+![](ezgif-3-657dfcbbb32f.gif "Nullspace projection: a geometric look. The representation X is projected onto the nullspace of the gender classifier W, neutralizing the features it uses for gender prediction.")
 
 
 
