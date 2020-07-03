@@ -12,58 +12,30 @@ Controlling Neural Representations by Iterative Nullsapce Projections
 
 
 
-Table of Contents
-
-
-
-1. Calling neural models to order (intro)
-2. Existing approaches and their limitations
-3. Our method - intuition, a little math background, cool plots (animation?)
-4. Experiments?
-5. What we learned and what remains to be done
-6. Hinting about future works and applications to interpretability
-
-
-
-(intro) Calling neural models to order
-
-
+## Calling neural models to order
 
 Neural models are notoriously opaque. While in recent years we witnessed an array of increasingly powerful models -- from word representations to contextualized transformers -- that capture many aspects of human language, ranging from the structural aspects of syntax, to more high level semantic aspects. But what can we do if we want to make sure that something is not encoded in the model? This requirement arises in multiple scenarios. For example, we may want to have word embeddings that focus on lexical semantics, but discard the syntactic distinctions that are often encoded in the embeddings (e.g. tense); and to ensure fairness, we may want to have models that do not encode gender-related concepts.
 
+A natural way to approach this is having a preprocessing step for the training data, which eliminates the distinctions we do not want to encode: in our embedding-tense example, this can be lemmatization. While this solution is applicable in simple cases such as removing tense distinctions, it becomes much less practical when working with pretrained contextualized models, such as BERT, and when trying to eliminate more vague information such as gender distinctions. First, re-training large language models on new datasets is often impractical for standard practitioners. More importantly, it is not clear how to pre-process the training data, to remove gender distinctions: we first have to understand which parts of the input are causally responsible for the gender components in the encoding, and how to neutralize them. As we are about to see, societal concepts such as gender and race are deeply rooted in representations trained on neutral-language corpora, and are often represented in implicit and opaque ways. Naively removing gendered pronouns and first names from the training corpus does alleviate the problem, but this is far from a complete solution.
 
-
-A natural way to approach this is having a preprocessing step for the training data, which eliminates the distinctions we do not want to encode: in our embedding-tense example, this can be lemmatization. While this solution is applicable in simple cases such as removing tense distinctions, it becomes much less practical when working with pretrained contextualized models, such as BERT, and when trying to eliminate less well-defined information such as gender distinctions. First, re-training large language models on new datasets is often impractical for standard practitioners. More importantly, it is not clear how to pre-process the training data, to remove gender distinctions: we first have to understand which parts of the input are causally responsible for the gender components in the encoding, and how to neutralize them. As we are about to see, societal concepts such as gender and race are deeply rooted in representations trained on neutral-language corpora, and are often represented in implicit and opaque ways. Naively removing gendered pronouns and first names from the training corpus does alleviate the problem, but this is far from a complete solution.
-
-
-
-Existing approaches
-
-
+## Existing approaches
 
 In recent years, a large body of work has shown that neural models capture subtle cues for protected attributes, such as the gender or the race of the person that wrote the text, of the text’s focus. The first works have focused on word embeddings, and they have shown that (link) word embeddings capture and amplify many statistical differences between groups, that are reflected in the training corpora. For example, due to the imbalance between men and women in STEM fields, the representation of STEM fields such as mathematics is closer to male names than to female names. While this reflects an existing statistical tendency, the models can further amplify this trend (cite); moreover, they can encourage the persistence of this imbalance, by causally influencing real-word decisions., for example, a CV-filtering system that is based on word embeddings, might consider the application of a female nuclear physicist an unlikely event.
-
-
 
 For word embeddings, one primary post-hoc “debiasing” method is the projection-based method of Bolukbasi et al. They aim to identify a gender direction in the embedding space, and neutralize it. Consider the direction defined as the difference between two inherently-gendered pairs, such as he-she. Subtraction of the two parallel but opposite words should leave us with a direction that supposedly (one) aspect of gender in the embedding space. We can delete the projection of each word embedding on this direction, and neutralize that aspect of gender. If one defines the gender content of an embedding as this projection, then we are done. However, Gonen and Goldberg have shown that this is not the case: even after we neutralize this direction, word vectors are still clustered very well by gender: as we are going to see, gender is encoded in multiple directions, not all of them as interpretable as the he-she direction.
 
 
 
-TODO:
+When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, such in domain adaptation (cite, ganin et al.) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (cite <https://www.aclweb.org/anthology/P18-2005.pdf>, <https://www.aclweb.org/anthology/D18-1001.pdf>, <http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf>).
 
-* Deep classifiers: talk about adversarial methods & their limitations
-*
-
-When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, but
+However, Elazar and Goldberg (cite) have shown that even though using adversarial training for some protected attribute, this method does not completely remove all the information through a post-hoc classifier.
 
 
 
 To conclude, existing approaches mostly use either use projection-based debiasing, which is simple and elegant - but limited in power as it is based on neutralizing few human-defined “gender direction” -- or adverserial methods, which are data driven and nonlinear, but are opaque and were shown to be not exhaustive. Can we enjoy the benefits of both worlds?
 
+## Enter Iterative Nullspace projections
 
+We propose a method that generalizes the previous projection-based methods, and exposes their true potential. Unlike previous methods ,we do not presuppose a few “gender directions”, but rather learn them from the data; and we perform an iterative process which aims to remove all gender directions. We begin with an intuitive description of our approach. Consider a linear probe model that is trained to predict gender from a representation. The model is parameterized by a matrix (or, in the binary case, a vector) W that can be interpreted as conveying information on directions in the latent space which are predictive of gender. If we could neutralize those directions, we could eliminate the main features in the representation which encode gender.
 
-Enter Iterative Nullspace projections
-
-
-
-We propose a method that generalizes the
+Luckily, when using linear probes, linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1.
