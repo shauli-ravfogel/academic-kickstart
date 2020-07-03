@@ -81,4 +81,8 @@ We noted earlier that in INLP we treat the classifiers we train for the predicti
 
 ![](table.jpeg)
 
-Interestingly, many of of the directions are interpretble: the first direction seems to capture gendered pronouns; the third ones -- first names ,and other gendered words; and more. At the same times, some gender associaations are harder to interpret, for instance the association between "manufacturer", "specifications" and "addressing" with male biographies. It is not clear if those represent merely spurious correlatons, or whether they reflect actual subtle differences between the biographies of men and women.
+Interestingly, many of of the directions are interpretble: the first direction seems to capture gendered pronouns; the third ones -- first names ,and other gendered words; and more. At the same times, some gender associations are harder to interpret, for instance the association between "manufacturer", "specifications" and "addressing" with male biographies. It is not clear if those represent merely spurious correlations, or whether they reflect actual subtle differences between the biographies of men and women. 
+
+## What's next?
+
+We have identified two key weakneses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exshaustive. We see this method as a strong alternative to adversarial removal of inforamtion: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representatons, in a controlled manner - provided that we have annotation for that propety.
