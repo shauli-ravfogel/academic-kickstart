@@ -1,6 +1,7 @@
 ---
 title: INLP
 date: 2020-07-01T14:29:05.014Z
+summary: ""
 draft: false
 featured: false
 image:
@@ -57,3 +58,13 @@ We test our method on increasingly complex settings: debiasing static word embed
 We begin with removing gender associations from GloVe word embeddings. Following previous works, we annotate word vectors by gender bias according to their projection on the he-she. Initially, word vectors are clustered by gender bias:
 
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
+
+
+
+The following animations displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
+
+
+
+![](tsne2.gif)
+
+Finally, we used WHEAT to measure whether the transformed vectors still show undesried associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
