@@ -23,7 +23,7 @@ image:
 </head>
 
 <body>
-<h2>Math in TeX notation</h2>
+<h2>Math in TeX notation $g = f(x)$</h2>
 
 **Yanai Elazar and Shauli Ravfogel**
 
