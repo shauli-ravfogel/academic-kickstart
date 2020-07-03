@@ -56,4 +56,4 @@ We test our method on increasingly complex settings: debiasing static word embed
 
 We begin with removing gender associations from GloVe word embeddings. Following previous works, we annotate word vectors by gender bias according to their projection on the he-she. Initially, word vectors are clustered by gender bias:
 
-![](tsne-init.jpeg)
+![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
