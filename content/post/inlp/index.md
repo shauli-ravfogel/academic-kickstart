@@ -10,8 +10,6 @@ image:
 ---
 Controlling Neural Representations by Iterative Nullsapce Projections
 
-
-
 ## Calling neural models to order
 
 Neural models are notoriously opaque. While in recent years we witnessed an array of increasingly powerful models -- from word representations to contextualized transformers -- that capture many aspects of human language, ranging from the structural aspects of syntax, to more high level semantic aspects. But what can we do if we want to make sure that something is not encoded in the model? This requirement arises in multiple scenarios. For example, we may want to have word embeddings that focus on lexical semantics, but discard the syntactic distinctions that are often encoded in the embeddings (e.g. tense); and to ensure fairness, we may want to have models that do not encode gender-related concepts.
@@ -26,11 +24,11 @@ For word embeddings, one primary post-hoc “debiasing” method is the projecti
 
 
 
+![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg)
+
 When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adverserial method show impressive performance in many tasks, such in domain adaptation (cite, ganin et al.) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (cite <https://www.aclweb.org/anthology/P18-2005.pdf>, <https://www.aclweb.org/anthology/D18-1001.pdf>, <http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf>).
 
 However, Elazar and Goldberg (cite) have shown that even though using adversarial training for some protected attribute, this method does not completely remove all the information through a post-hoc classifier.
-
-
 
 To conclude, existing approaches mostly use either use projection-based debiasing, which is simple and elegant - but limited in power as it is based on neutralizing few human-defined “gender direction” -- or adverserial methods, which are data driven and nonlinear, but are opaque and were shown to be not exhaustive. Can we enjoy the benefits of both worlds?
 
@@ -40,4 +38,4 @@ We propose a method that generalizes the previous projection-based methods, and 
 
 Luckily, when using linear probes, linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe W1, calculate its nullspace N(W1) and the projection P_N(W1) onto the nullspace, project the data to get a first “debiased” version P_N(w1)X, and then train the second gender classifier W2, its nullsapce N(W2) and projection P_N(W2), apply it to get a second “debiased” version of the data P_N(W2)P_N(w1)X, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection P=Pn...P2P1.
 
-![d](geomtric.1.jpeg "d")
+![](geomtric.1.jpeg "d")
