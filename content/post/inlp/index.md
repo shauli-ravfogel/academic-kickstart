@@ -73,4 +73,6 @@ Yanai - your part
 
 ### Debiasing: in the wild
 
-Finally, we test our method on a multiclass fair classification setting. We user the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset is composed of short biographies, divided into 28 professions and
+Finally, we test our method on a multi-class fair classification setting. We user the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset contain short biographies, divided into 28 professions and annotated by gender. They have shown that models trained on this dataset tend to condition on gender. We use 3 models: bag of words, bag of word vectors, and BERT. In all cases, we perform INLP on the last hidden representation, and then finetune the last linear layer. The method decreases the True Positive Rate Gap (TPR-Gap) between men and women, and the correlation between the bias and the percentage of women in each profession is mitigated:
+
+![](tpr-vs-women-percentage.jpeg)
