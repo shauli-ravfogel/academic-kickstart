@@ -87,4 +87,6 @@ Yanai - your part
 
 ### Debiasing: in the wild
 
-We finalize
+Finally, we
+
+<img src="https://render.githubusercontent.com/render/math?math=e^{i +\pi} =x+1">
