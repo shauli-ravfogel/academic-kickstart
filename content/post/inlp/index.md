@@ -76,3 +76,9 @@ Yanai - your part
 Finally, we test our method on a multi-class fair classification setting. We user the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset contain short biographies, divided into 28 professions and annotated by gender. They have shown that models trained on this dataset tend to condition on gender. We use 3 models: bag of words, bag of word vectors, and BERT. In all cases, we perform INLP on the last hidden representation, and then finetune the last linear layer. The method decreases the True Positive Rate Gap (TPR-Gap) between men and women, and the correlation between the bias and the percentage of women in each profession is mitigated:
 
 ![](tpr-vs-women-percentage.jpeg)
+
+We noted earlier that in INLP we treat the classifiers we train for the prediction of the protected attributes, as conveying information on latent features that are correlative to the propety we focus on. We can emrbace this view to shed light on the *different facets by which gender bias is manifested in neural models*. We used the bag-of-word-embeddins model for the biographies dataset, and inspect the top 15 gender directions identified by INLP. we then inspect the closest words to each of those directions:
+
+![](table.jpeg)
+
+Interestingly, many of of the directions are interpretble: the first direction seems to capture gendered pronouns; the third ones -- first names ,and other gendered words; and more. At the same times, some gender associaations are harder to interpret, for instance the association between "manufacturer", "specifications" and "addressing" with male biographies. It is not clear if those represent merely spurious correlatons, or whether they reflect actual subtle differences between the biographies of men and women.
