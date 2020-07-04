@@ -49,7 +49,7 @@ Empirically we find that the latent space is approximately linearly separable by
 
 But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
-![](ezgif.com-crop.gif "\"debiasing\" deeper models: freeze the network, and apply INLP on the last hidden representa")
+![](ezgif.com-crop.gif "\\"debiasing\\" deeper models: freeze the network, and apply INLP on the last hidden representa")
 
 We test our method on increasingly complex settings: debiasing static word embeddings, deep binary classification and deep multiclass classification. 
 
@@ -65,11 +65,11 @@ The following animations displays consecutive T-sne projections along the runnin
 
 Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
 
-
-
 ### Dataset bias vs model bias
 
-Yanai - your part
+We continue with a more realistic --- but still controlled --- scenario, where we make use of [DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in [Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
+
+We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
 
 ### Debiasing: in the wild
 
