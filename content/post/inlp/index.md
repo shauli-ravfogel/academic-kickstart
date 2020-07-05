@@ -102,7 +102,7 @@ Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure w
 <!---
 ### Dataset bias vs model bias
 
-We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
+We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
 
 We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
 
@@ -132,4 +132,4 @@ Since bias can have real world ramifications, one should always be cautious when
 
 ## Try it out!
 
-We release the [code](https://github.com/Shaul1321/nullspace_projection/) and [models](https://console.cloud.google.com/storage/browser/ai2i/nullspace/) used in this work, to foster new applications and usages, as well as reproducibility.
+We release the [code](https://github.com/shauli-ravfogel/nullspace_projection) and [models](https://console.cloud.google.com/storage/browser/ai2i/nullspace/) used in this work, to foster new applications and usages, as well as reproducibility.
