@@ -6,7 +6,7 @@ summary: "This post describes INLP, an algorithm we've proposed for removing
   methods. It uses linear algbera to \"edit\" the representation and control its
   content, and was found effective in mitigating gender bias. "
 draft: false
-featured: false
+featured: true
 image:
   filename: tsne-init.jpeg
   focal_point: Smart
