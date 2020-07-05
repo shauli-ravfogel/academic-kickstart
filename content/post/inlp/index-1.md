@@ -63,7 +63,7 @@ The following animations displays consecutive T-sne projections along the runnin
 
 ![](tsne2_2.gif)
 
-Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
+Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
 
 ### Dataset bias vs model bias
 
