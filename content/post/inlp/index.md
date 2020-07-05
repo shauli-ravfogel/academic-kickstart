@@ -1,7 +1,10 @@
 ---
 title: Iterative Nullspace Projection (INLP)
 date: 2020-07-05T07:07:54.545Z
-summary: "This post describes INLP, an algorithm we've proposed for removing information from representations, as an alternative to adversarial removal methods. It uses linear algbera to \"edit\" the representation and control its content, and was found effective in mitigating gender bias. "
+summary: "This post describes INLP, an algorithm we've proposed for removing
+  information from representations, as an alternative to adversarial removal
+  methods. It uses linear algbera to \"edit\" the representation and control its
+  content, and was found effective in mitigating gender bias. "
 draft: false
 featured: false
 image:
@@ -42,13 +45,19 @@ Neural models are notoriously opaque. In recent years we witnessed an array of i
 
 It is tempting to assume that this problem can be solved by a preprocessing step, which eliminates from the training data the distinctions we do not want to encode: in our embedding-tense example, this can be lemmatization. While this solution is applicable in simple cases such as removing tense distinctions, it becomes much less practical when working with pretrained contextualized models, such as BERT, and when trying to eliminate more vague information such as gender distinctions. First, re-training large language models on new datasets is often impractical for standard practitioners. More importantly, it is not clear **how** to pre-process the training data, in order to remove gender distinctions: we first have to understand which parts of the input are causally responsible for the gender components in the encoding, and how to neutralize them. As we are about to see, **societal concepts such as gender and race are deeply rooted in representations trained on neutral-language corpora**, and are often represented in implicit and opaque ways. Naively removing gendered pronouns and first names from the training corpus does reduce the problem, but this is far from a complete solution.
 
-## Existing approaches
+## What is currently known
+
+### Biases do exist
 
 In recent years, a large body of work has shown that neural models capture subtle cues for protected attributes, such as the gender or the race of the person that wrote the text, of the text’s focus. The first works have focused on word embeddings, and they have [shown](https://arxiv.org/abs/1607.06520) that word embeddings capture and amplify many statistical differences between groups, that are reflected in the training corpora. For example, due to the imbalance between men and women in STEM fields, the representation of STEM fields such as mathematics is closer to male names than to female names. While this reflects an existing statistical tendency, the models can further [amplify](https://arxiv.org/pdf/1707.09457.pdf) this trend; moreover, they can encourage the persistence of this imbalance, by causally influencing real-word decisions., for example, a CV-filtering system that is based on word embeddings, might consider the application of a female nuclear physicist an unlikely event.
+
+### Removing few predefined directions
 
 For word embeddings, one primary post-hoc “debiasing” method is the projection-based method of [Bolukbasi et al. (2019)](https://arxiv.org/abs/1901.09451). They aim to identify a gender direction in the embedding space, and neutralize it. Consider the direction defined as the difference between two inherently-gendered pairs, such as he-she. Subtraction of the two parallel but opposite words should leave us with a direction that supposedly (one) aspect of gender in the embedding space. We can delete the projection of each word embedding on this direction, and neutralize that aspect of gender. If one defines the gender content of an embedding as this projection, then we are done. However, [Gonen and Goldberg (2019)](https://www.aclweb.org/anthology/N19-1061/) have shown that this is not the case: even after we neutralize this direction, word vectors are still clustered very well by gender (see below, right plot). As we are going to see, *gender is encoded in multiple directions, not all of them as interpretable as the he-she direction.*
 
 ![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg "Gonen and Goldberg 2019: debiasing-by-projection is not enough")
+
+### Adversarial removal
 
 When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adversarial method show impressive performance in many tasks, such in [domain adaptation](http://jmlr.org/papers/volume17/15-239/15-239.pdf) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (e.g.  [](https://www.aclweb.org/anthology/P18-2005.pdf)[1](https://www.aclweb.org/anthology/P18-2005.pdf), [2](https://www.aclweb.org/anthology/D18-1001.pdf), [3](http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf)).
 
@@ -60,11 +69,13 @@ To conclude, existing approaches mostly use either use projection-based debiasin
 
 **We propose a method that generalizes the previous projection-based methods, and exposes their true potential.** Unlike previous methods, we do not presuppose a few “gender directions”, but rather **learn them from the data**; and we perform an **iterative process** which aims to remove all gender directions. We begin with an intuitive description of our approach. Consider a linear probe model that is trained to predict gender from a representation. **The model is parameterized by a matrix (or, in the binary case, a vector) $W$ that can be interpreted as conveying information on directions in the latent space which are predictive of gender.** If we could neutralize those directions, we could eliminate the main features in the representation which encode gender.
 
-Luckily, when using linear probes, *linear algebra is equipped with a simple operation that does just that: projection to the nullspace of* $W$. Recall that the nullspace of $W$ Is defined as $N(W) =$ {$x|Wx = 0$}, i.e. all vectors in the nullspace are mapped by $W$ to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation $x$ and orthogonally projected it onto $N(W)$, we’d end up with the closest point to the original $x$ that is within the nullspace, and we’d neutralize the gender features used by $W$. The animation below gives a geomtric demonstration of this idea in the 2-dimensional case:
+Luckily, when using linear probes, *linear algebra is equipped with a simple operation that does just that: projection to the nullspace of* $W$. Recall that the nullspace of $W$ Is defined as $N(W) =$ {$x|Wx = 0$}, i.e. all vectors in the nullspace are mapped by $W$ to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification (according to that classifier). If we took the representation $x$ and orthogonally projected it onto $N(W)$, we’d end up with the closest point to the original $x$ that is within the nullspace, and we’d neutralize the gender features used by $W$. The animation below gives a geomtric demonstration of this idea in the 2-dimensional case:
 
 ![](geometric.gif "Nullspace projection: a geometric look. The representation X is projected onto the nullspace of the gender classifier W, neutralizing the features it uses for gender prediction.")
 
 Empirically we find that the latent space is approximately linearly separable by gender according to multiple different orthogonal planes. So we just repeat the process: we learn the first gender probe $W_1$, calculate its nullspace $N(W\_1)$ and the projection $P\_{N(W\_1)}$ onto the nullspace, project the data to get a first “debiased” version $P\_{N(W_1)}X$; and then we train the second gender classifier $W_2$ *on the "debiased" data*, calculate its nullsapce $N(W\_2)$ and projection $P\_{N(W\_2)}$, apply it to get a second “debiased” version of the data $P\_{N(W\_2)}P\_{N(W\_1)}X$, and so forth. We continue this process until no linear probe achieve above random accuracy. At this point we return the final “debiasing” projection $P=P\_{N(W\_n)}...P\_{N(W\_2)}P\_{N(W_1)}$. This is the essence of our algorithm, which we call **Iterative Nullsapce Projection (INLP)**.
+
+### Handling deep models
 
 But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
@@ -78,7 +89,7 @@ We begin with removing gender associations from GloVe word embeddings. Following
 
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
 
-The following animation displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
+The following animation displays t-SNE projections of the data points as the INLP process progresses It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
 
 ![](tsne2_2.gif)
 
@@ -87,7 +98,7 @@ Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure w
 <!---
 ### Dataset bias vs model bias
 
-We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
+We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
 
 We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
 
