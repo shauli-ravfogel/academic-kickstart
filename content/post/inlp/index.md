@@ -8,7 +8,7 @@ summary: "This post describes INLP, an algorithm we've proposed for removing
 draft: false
 featured: false
 image:
-  filename: tsne2_2.gif
+  filename: tsne-init.jpeg
   focal_point: Smart
   preview_only: false
 ---
