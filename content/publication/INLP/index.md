@@ -44,7 +44,7 @@ url_poster:
 url_project:
 url_slides: "https://docs.google.com/presentation/d/1Xi5HLpvvRE8BqcNBZMyPS4gBa0i0lqZvRebz-AZxAPA/edit?usp=sharing"
 url_source:
-url_video:
+url_video: "https://slideslive.com/38929453/null-it-out-guarding-protected-attributes-by-iterative-nullspace-projection"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
