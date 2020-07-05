@@ -65,9 +65,9 @@ As we are going to see, *gender is encoded in multiple directions, not all of th
 
 When focusing on deep models, on the other hand, projection based methods are much less popular than adversarial training, where we regularize the training with an adversary which tries to predict the protected attributes from the hidden representations of the main-task models. Adversarial method show impressive performance in many tasks, such in [domain adaptation](http://jmlr.org/papers/volume17/15-239/15-239.pdf) for reducing the variability between domains. A similar approach was used to neutralize demographic features in the representations (e.g.  [](https://www.aclweb.org/anthology/P18-2005.pdf)[1](https://www.aclweb.org/anthology/P18-2005.pdf), [2](https://www.aclweb.org/anthology/D18-1001.pdf), [3](http://papers.nips.cc/paper/6661-controllable-invariance-through-adversarial-feature-learning.pdf)).
 
-However, [Elazar and Goldberg (2018)](https://arxiv.org/abs/1808.06640) have shown that even though using adversarial training for some protected attribute, this method does not completely remove all the information through a post-hoc classifier.
+However, [Elazar and Goldberg (2018)](https://arxiv.org/abs/1808.06640) have shown that even though using adversarial training can hinder the ability to identify some protected attributes in the representations, this method does not completely remove all the information, and it is often still can be recovered using a post-hoc classifier.
 
-To conclude, existing approaches mostly use either use projection-based debiasing, which is simple and elegant - but limited in power as it is based on neutralizing few human-defined “gender direction” -- or adversarial methods, which are data driven and nonlinear, but are opaque and were shown to be not exhaustive. Can we enjoy the benefits of both worlds?
+To wrap up, existing approaches mostly use either use projection-based debiasing, which is simple and elegant - but limited in power as it is based on neutralizing few human-defined “gender direction” -- or adversarial methods, which are data driven and nonlinear, but are opaque and were shown to be not exhaustive. Can we enjoy the benefits of both worlds?
 
 ## Enter Iterative Nullspace projections
 
@@ -102,7 +102,7 @@ Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure w
 <!---
 ### Dataset bias vs model bias
 
-We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
+We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
 
 We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
 
