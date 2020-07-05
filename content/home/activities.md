@@ -12,7 +12,7 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
-* July 2020: presenting out [paper](https://www.aclweb.org/anthology/2020.acl-main.647/) at ACL2020. 
+* July 2020: presenting our [paper](https://www.aclweb.org/anthology/2020.acl-main.647/) (virtually) at ACL2020. 
 * February-March 2020: Visiting student at prof. Tal Linzen's [research group](https://caplabjhu.org/), Johns Hopkins University. 
 * March 2020: Visited [prof. Bob Frank](https://bobfrank1.github.io/) research group, Yale University. 
 * January 2020: started an internship at AI2 israel.
