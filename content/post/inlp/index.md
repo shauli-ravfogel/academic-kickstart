@@ -1,5 +1,5 @@
 ---
-title: Iterative Nullspace Projections (INLP)
+title: Iterative Nullspace Projection (INLP)
 date: 2020-07-05T07:07:54.545Z
 summary: ""
 draft: false
