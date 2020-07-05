@@ -9,9 +9,9 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-**Shauli Ravfogel and Yanai Elazar**
+#### **Shauli Ravfogel and Yanai Elazar**
 
-
+This blog post describes our ACL paper on controlled removal of information from representations: 
 
 Shauli Ravfogel, Yanai Elazar, Hila Gonen, Micheal Twiton and Yoav Goldberg. [Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection](https://www.aclweb.org/anthology/2020.acl-main.647/). ACL2020
 
