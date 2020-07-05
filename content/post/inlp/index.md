@@ -64,7 +64,6 @@ The following animations displays consecutive T-sne projections along the runnin
 Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
 
 <!---
-
 ### Dataset bias vs model bias
 
 We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
