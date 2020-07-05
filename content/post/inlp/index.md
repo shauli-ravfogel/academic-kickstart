@@ -1,7 +1,7 @@
 ---
 title: Iterative Nullspace Projection (INLP)
 date: 2020-07-05T07:07:54.545Z
-summary: ""
+summary: "This post describes INLP, an algorithm we proposed for removing information from representations in a controlled manner."
 draft: false
 featured: false
 image:
