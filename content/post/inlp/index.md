@@ -33,6 +33,10 @@ MathJax.Hub.Queue(function() {
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
+
+
+$\overleftarrow{he}$
+
 ### **Shauli Ravfogel and Yanai Elazar**
 
 This blog post describes our ACL paper on controlled removal of information from representations: 
