@@ -63,7 +63,7 @@ The following animations displays consecutive T-sne projections along the runnin
 
 ![](tsne2_2.gif)
 
-Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associactions became insificant following INLP.
+Finally, we used WHEAT to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
 
 ### Dataset bias vs model bias
 
@@ -77,7 +77,7 @@ Finally, we test our method on a multi-class fair classification setting. We use
 
 ![](tpr-vs-women-percentage.jpeg)
 
-We noted earlier that in INLP we treat the classifiers we train for the prediction of the protected attributes, as conveying information on latent features that are correlative to the propety we focus on. We can emrbace this view to shed light on the *different facets by which gender bias is manifested in neural models*. We used the bag-of-word-embeddins model for the biographies dataset, and inspect the top 15 gender directions identified by INLP. we then inspect the closest words to each of those directions:
+We noted earlier that in INLP we treat the classifiers we train for the prediction of the protected attributes, as conveying information on latent features that are correlative to the property we focus on. We can emrbace this view to shed light on the *different facets by which gender bias is manifested in neural models*. We used the bag-of-word-embeddins model for the biographies dataset, and inspect the top 15 gender directions identified by INLP. we then inspect the closest words to each of those directions:
 
 ![](table.jpeg)
 
