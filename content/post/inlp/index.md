@@ -85,7 +85,9 @@ Interestingly, many of of the directions are interpretble: the first direction s
 
 ## What's next?
 
-We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. We see this method as a strong alternative to adversarial removal of inforamtion: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property. 
+We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. We see this method as a strong alternative to adversarial removal of information: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property.
+
+Moreover, one can use INLP to study the information we focus on, rather than to neutralzie it. Recall that in INLP we identify a set of directions in the latent space which correspond to the protected attribute. While in the conventional use we discard those directions, we can alternatively discard all *other* directions, maintaining only the components of the representation space that are related to it. Under this setting, INLP serves as a supervised dimensionality reduction method: we distill the part of the representaton we are interested in. This can have multiple use cases: exploring the way neural models d
 
 \- limitations
 
