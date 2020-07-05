@@ -39,7 +39,7 @@ To conclude, existing approaches mostly use either use projection-based debiasin
 
 **We propose a method that generalizes the previous projection-based methods, and exposes their true potential.** Unlike previous methods, we do not presuppose a few “gender directions”, but rather **learn them from the data**; and we perform an **iterative process** which aims to remove all gender directions. We begin with an intuitive description of our approach. Consider a linear probe model that is trained to predict gender from a representation. The model is parameterized by a matrix (or, in the binary case, a vector) W that can be interpreted as conveying information on directions in the latent space which are predictive of gender. If we could neutralize those directions, we could eliminate the main features in the representation which encode gender.
 
-Luckily, when using linear probes, *linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W*. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. 
+Luckily, when using linear probes, *linear algebra is equipped with a simple operation that does just that: projection to the nullspace of W*. Recall that the nullspace of W Is defined as N(W) = {x|Wx = 0}, ie all vectors in the nullspace are mapped by W to the zero vector, and are orthogonal to W. They thus convey no information that is relevant to gender classification. If we took the representation x and orthogonally projected it onto N(W), we’d end up with the closest point to the original x that is within the nullspace, and we’d neutralize the gender features used by W. The animation below gives a geomtric demonstration of this idea in the 2-dimensional case:
 
 ![](geometric.gif "Nullspace projection: a geometric look. The representation X is projected onto the nullspace of the gender classifier W, neutralizing the features it uses for gender prediction.")
 
@@ -57,7 +57,7 @@ We begin with removing gender associations from GloVe word embeddings. Following
 
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
 
-The following animations displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
+The following animation displays consecutive T-sne projections along the running of INLP. It is evident that the vectors become increasingly mixed, and are no longer clustered by gender. We also quantified this effect using a measure for cluster purity. 
 
 ![](tsne2_2.gif)
 
