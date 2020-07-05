@@ -49,7 +49,7 @@ Empirically we find that the latent space is approximately linearly separable by
 
 But what about deeper models? we take use of the fact they can be decomposed into a deep encoder and a final linear layer. We apply INLP on the final hidden representaton, and potentially perform finetuning of the last linear layer afterwards. Since it's linear, and INLP projection is not invertible, the linear layer cannot recover the removed information.
 
-![](ezgif.com-crop.gif "\\"debiasing\\" deeper models: freeze the network, and apply INLP on the last hidden representa")
+![](ezgif.com-crop.gif "\"debiasing\" deeper models: freeze the network, and apply INLP on the last hidden representation.")
 
 We test our method on increasingly complex settings: debiasing static word embeddings, deep binary classification and deep multiclass classification. 
 
