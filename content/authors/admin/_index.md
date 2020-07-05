@@ -45,6 +45,6 @@ user_groups:
   - Researchers
   - Visitors
 ---
-I am a second year master's student in the Natural Language Processing Lab at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
+Hi! I am a second year master's student in the Natural Language Processing Lab at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
 
 I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utillize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts.
