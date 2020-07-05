@@ -25,7 +25,7 @@ social:
     link: https://scholar.google.com/citations?user=x09r-T8AAAAJ&hl=en&oi=ao
   - icon: github
     icon_pack: fab
-    link: https://github.com/Shaul1321
+    link: https://github.com/shauli-ravfogel
   - link: https://www.linkedin.com/in/shauli-ravfogel-619712130
     icon: linkedin
     icon_pack: fab
