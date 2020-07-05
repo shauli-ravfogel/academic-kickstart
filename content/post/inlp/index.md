@@ -35,7 +35,7 @@ MathJax.Hub.Queue(function() {
 
 
 
-$\overleftarrow{he}$
+$\overrightarrow{he} - \overrightarrow{she}$
 
 ### **Shauli Ravfogel and Yanai Elazar**
 
