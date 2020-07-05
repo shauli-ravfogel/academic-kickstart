@@ -1,7 +1,7 @@
 ---
 title: Iterative Nullspace Projection (INLP)
 date: 2020-07-05T07:07:54.545Z
-summary: "This post describes INLP, an algorithm we've proposed for removing information from representations, as an alternative to adversarial removal methods. It uses linear algbera to "edit" the representation and control its content, and was found effective in mitigating gender bias. "
+summary: ""
 draft: false
 featured: false
 image:
