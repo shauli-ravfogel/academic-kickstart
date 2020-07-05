@@ -59,11 +59,15 @@ The following animations displays consecutive T-sne projections along the runnin
 
 Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
 
+<!---
+
 ### Dataset bias vs model bias
 
 We continue with a more realistic --- but still controlled --- scenario, where we make use of [DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in [Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
 
 We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
+
+\-->
 
 ### Debiasing: in the wild
 
@@ -79,7 +83,7 @@ Interestingly, many of of the directions are interpretble: the first direction s
 
 ## What's next?
 
-We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. **We see this method as a strong alternative to adversarial removal of information**: while we focused on gender as a case study, we can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property. This can also serve as a *behavioral* test: we can remove some information, and inspect how does its removal influences the behavior of the model in some other main task (e.g. language modeling). 
+We have identified two key weaknesses of previous projection-based information-removal methods, and proposed a new method which is both data-driven and exhaustive. **We see this method as a strong alternative to adversarial removal of information**: while we focused on gender as a case study, one can use INLP to selectively remove any kind of information from representations, in a controlled manner - provided that we have annotation for that property. This can also serve as a *behavioral* test: we can remove some information, and inspect how does its removal influences the behavior of the model in some other main task (e.g. language modeling). 
 
 Moreover, one can use INLP to study the information we focus on, rather than to neutralize it. Recall that in INLP we identify a set of directions in the latent space which correspond to the protected attribute. While in the conventional use we discard those directions, in a complementary setting we can alternatively discard all *other* directions, maintaining only the components of the representation space that are related to it. Under this setting, **INLP serves as a supervised dimensionality reduction method: we distill the part of the representation we are interested in**. This can have multiple use cases: exploring BERT's "syntactic subspace" (e.g. by using INLP to find the subspace that encodes dependency edge identity); analyzing BERT "gender subspace" (which sentences are close in that subspace, but not necessarily in the original representation space? which phrases influence the representation on the gender subspace -- and which do not?); and more. 
 
