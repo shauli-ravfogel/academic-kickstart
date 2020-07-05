@@ -33,10 +33,6 @@ MathJax.Hub.Queue(function() {
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-
-
-$\overrightarrow{he} - \overrightarrow{she}$
-
 ### **Shauli Ravfogel and Yanai Elazar**
 
 Welcome! this blog post describes our ACL paper on controlled removal of information from representations: 
@@ -57,13 +53,13 @@ In recent years, a large body of work has shown that neural models capture subtl
 
 ### Removing few predefined directions is not enough
 
-For word embeddings, one primary post-hoc “debiasing” method is the projection-based method of [Bolukbasi et al. (2019)](https://arxiv.org/abs/1901.09451). They aim to identify a gender direction in the embedding space, and neutralize it. Consider the direction defined as the difference between two inherently-gendered pairs, such as he-she. Subtraction of the two parallel but opposite words should leave us with a direction that supposedly (one) aspect of gender in the embedding space. We can delete the projection of each word embedding on this direction, and neutralize that aspect of gender. If one defines the gender content of an embedding as this projection, then we are done. However, [Gonen and Goldberg (2019)](https://www.aclweb.org/anthology/N19-1061/) have shown that this is not the case: even after we neutralize this direction, word vectors are still clustered very well by gender (see below, right plot). 
+For word embeddings, one primary post-hoc “debiasing” method is the projection-based method of [Bolukbasi et al. (2019)](https://arxiv.org/abs/1901.09451). They aim to identify a gender direction in the embedding space, and neutralize it. Consider the direction defined as the difference between two inherently-gendered pairs, such as $\overrightarrow{he} - \overrightarrow{she}$. Subtraction of the two parallel but opposite words should leave us with a direction that supposedly (one) aspect of gender in the embedding space. We can delete the projection of each word embedding on this direction, and neutralize that aspect of gender. If one defines the gender content of an embedding as this projection, then we are done. However, [Gonen and Goldberg (2019)](https://www.aclweb.org/anthology/N19-1061/) have shown that this is not the case: even after we neutralize this direction, word vectors are still clustered very well by gender (see below, right plot). 
 
 ![Gonen and Goldberg 2019: debiasing-by-projection is not enough](lipstic.jpeg "Gonen and Goldberg 2019: debiasing-by-projection is not enough")
 
 #### Gender is manifested in many ways
 
-As we are going to see, *gender is encoded in multiple directions, not all of them as interpretable as the he-she direction.* the projection-based appraoch implictly assumes that gender is encoded in a very low-dimensional linear subsapce (e.g., the first principle coponent of few human-defined directions). In fact, gender is correlated with multiple *orthogonal* directions in the embedding space, which cannot be captured in a single direction. For instance, when we remove (using a technique we describe later) the information associated with the directions "he"-"she", "John"-"Mary" and "father"-"mother", we retain classification accuracy of 98.7%. When removing the first *learned* direction using our method we fare much better - gender classification accuracy drops to 86% - but is still significantly above random. Only after identifying and neutralizing 35 orthogonal directions do we get to random classification accuracy. 
+As we are going to see, *gender is encoded in multiple directions, not all of them as interpretable as the* $\overrightarrow{he} - \overrightarrow{she}$ *direction.* the projection-based appraoch implictly assumes that gender is encoded in a very low-dimensional linear subsapce (e.g., the first principle coponent of few human-defined directions). In fact, gender is correlated with multiple *orthogonal* directions in the embedding space, which cannot be captured in a single direction. For instance, when we remove (using a technique we describe later) the information associated with the directions $\overrightarrow{he} - \overrightarrow{she}$, $\overrightarrow{John} - \overrightarrow{Mary}$ and $\overrightarrow{father} - \overrightarrow{mother}$, we retain classification accuracy of 98.7%. When removing the first *learned* (rather than pre-specified) direction using our method we fare much better - gender classification accuracy drops to 86% - but is still significantly above random. Only after identifying and neutralizing 35 orthogonal directions do we get to random classification accuracy. 
 
 ### Adversarial removal is not exhaustive
 
@@ -93,7 +89,7 @@ We test our method on increasingly complex settings: debiasing static word embed
 
 ### "Debiasing" word embeddings
 
-We begin with removing gender associations from GloVe word embeddings. Following previous works, we annotate word vectors by gender bias according to their projection on the he-she direction. Initially, word vectors are clustered by gender bias:
+We begin with removing gender associations from GloVe word embeddings. Following previous works, we annotate word vectors by gender bias according to their projection on the $\overrightarrow{he} - \overrightarrow{she}$ direction. Initially, word vectors are clustered by gender bias:
 
 ![](tsne-init.jpeg "t-SNE projection of word vectors, colored by gender bias. ")
 
