@@ -38,7 +38,7 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://www.aclweb.org/anthology/2020.acl-main.647/"
-url_code: "https://github.com/Shaul1321/nullspace_projection"
+url_code: "https://github.com/shauli-ravfogel/nullspace_projection"
 url_dataset:
 url_poster:
 url_project:
