@@ -59,7 +59,7 @@ For word embeddings, one primary post-hoc “debiasing” method is the projecti
 
 #### **Concepts** are manifested in many ways
 
-As we are going to see, *gender is encoded in multiple directions, not all of them as interpretable as the* $\overrightarrow{he} - \overrightarrow{she}$ *direction.* the projection-based appraoch implictly assumes that gender is encoded in a very low-dimensional linear subsapce (e.g., the first principle coponent of few human-defined directions). In fact, gender is correlated with multiple *orthogonal* directions in the embedding space, which cannot be captured in a single direction. For instance, when we remove (using a technique we describe later) the information associated with the directions $\overrightarrow{he} - \overrightarrow{she}$, $\overrightarrow{John} - \overrightarrow{Mary}$ and $\overrightarrow{father} - \overrightarrow{mother}$, we retain classification accuracy of 98.7%. When removing the first *learned* (rather than pre-specified) direction using our method we fare much better - gender classification accuracy drops to 86% - but is still significantly above random. Only after identifying and neutralizing 35 orthogonal directions do we get to random classification accuracy. While we demonstrated on gender, we observed it in many other concepts as well.
+As we are going to see, *gender is encoded in multiple directions, not all of them as interpretable as the* $\overrightarrow{he} - \overrightarrow{she}$ *direction.* the projection-based appraoch implictly assumes that gender is encoded in a very low-dimensional linear subsapce (e.g., the first principle coponent of few human-defined directions). In fact, gender is correlated with multiple *orthogonal* directions in the embedding space, which cannot be captured in a single direction. For instance, when we remove (using a technique we describe later) the information associated with the directions $\overrightarrow{he} - \overrightarrow{she}$, $\overrightarrow{John} - \overrightarrow{Mary}$ and $\overrightarrow{father} - \overrightarrow{mother}$, we retain classification accuracy of 98.7%. When removing the first *learned* (rather than pre-specified) direction using our method we fare much better - gender classification accuracy drops to 86% - but is still significantly above random. Only after identifying and neutralizing 35 orthogonal directions do we get to random classification accuracy. While we demonstrated this on gender, we observed a similar phenomenon in many other concepts as well.
 
 ### Adversarial removal is not exhaustive
 
@@ -97,12 +97,12 @@ The following animation displays t-SNE projections of the data points as the INL
 
 ![](tsne-3.gif)
 
-Finally, we used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations became insignificant following INLP.
+We used [WEAT](https://www.aclweb.org/anthology/W19-3804/) to measure whether the transformed vectors still show undesired associations between socially-biased terms and female and male names. Those associations are strong from the original embeddings, but became insignificant following INLP.
 
 <!---
 ### Dataset bias vs model bias
 
-We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
+We continue with a more realistic --- but still controlled --- scenario, where we make use of \\\\\\\\\\\\[DeepMoji](https://arxiv.org/abs/1708.00524) to encode tweets, which are associated with the author's race identity. Moreover, each tweet is also associated with a "sentiment" which is achieved through emojis (following the setup in \\\\\\\\\\\\[Elazar and Goldberge (2018)](https://arxiv.org/pdf/1808.06640.pdf)). We experiment with multiple setups where the labels proportion differ, in order to see how imbalanced setting affect the TPR-Gap.
 
 We measure the TPR-Gap after employing a standard MLP on the DeepMoji's representation, with and without INLP, and observe improvements for this measure, with minor-to-moderate performance loss to the sentiment task.
 
@@ -110,7 +110,7 @@ We measure the TPR-Gap after employing a standard MLP on the DeepMoji's represen
 
 ### Debiasing: in the wild
 
-Finally, we test our method on a multi-class fair classification setting. We user the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset contain short biographies, divided into 28 professions and annotated by gender. They have shown that models trained on this dataset tend to condition on gender. We use 3 models: bag of words, bag of word vectors, and BERT. In all cases, we perform INLP on the last hidden representation, and then finetune the last linear layer. The method decreases the True Positive Rate Gap (TPR-Gap) between men and women, and the correlation between the bias and the percentage of women in each profession is mitigated:
+Finally, we test our method on a multi-class fair classification setting. We use the profession-prediction datasets presented in [De-Arteaga et al. (2019)](https://arxiv.org/pdf/1901.09451.pdf). The dataset contains short biographies, divided into 28 professions and annotated by gender. It has been shown that models trained on this dataset tend to condition on gender, due to the imalanaced representation of men and women in some professions. We use 3 models: bag of words, bag of word vectors, and BERT. In all cases, we perform INLP on the last hidden representation, and then finetuned the last linear layer. The intervention decreases the True Positive Rate Gap (TPR-Gap) between men and women, and the correlation between the bias and the percentage of women in each profession is mitigated:
 
 ![](tpr-vs-women-percentage.jpeg)
 
