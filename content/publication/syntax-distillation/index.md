@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Studying the Inductive Biases of RNNs with Synthetic Variations of Natural Languages"
-authors: ["Shauli Ravfogel", "Yoav Goldberg", "Tal Linzen"]
+title: "Unsupervised Distillation of Syntactic Information from Contextualized Word Representations"
+authors: ["Shauli Ravfogel*", "Yanai Elazar*", "Jacob Goldberger", "Yoav Goldberg"]
                
 date: 2019
 doi: ""
