@@ -5,7 +5,7 @@ organizations:
 superuser: true
 authors:
   - admin
-title: Shauli Ravfogel Homepage
+title: Shauli Ravfogel
 role: Computer Science Graduate Student
 avatar_filename: img.jpg
 bio: ""
