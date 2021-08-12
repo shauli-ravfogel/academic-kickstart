@@ -12,6 +12,7 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
+* August-Septemebr 2021: Visitng student at Prof. Ryan Cotterell's group, ETH Zurich.                    
 * January 2020: invited talk at NLPhD speaker series @ Saarland University. 
 * December 2020: invited talk at prof. Roi Reichart's group, Technion ([slides](https://docs.google.com/presentation/d/1ejNocno_l-L1PtCuZN9gYbrp6P8xRPJcd-pkEoB-eyk/edit?usp=sharing))
 * July 2020: presenting our [paper](https://www.aclweb.org/anthology/2020.acl-main.647/) (virtually) at ACL2020. 
