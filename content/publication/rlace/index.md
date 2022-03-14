@@ -23,7 +23,7 @@ publication_short: ""
 abstract: "We formalize the problem of identifying and erasing concept subspaces -- linear subspaces whose removal prevent linear models from recovering some concept, such as gender, from the representation. We show that existing techniques are not optimal for this task, and propose effective solutions."
 
 # Summary. An optional shortened abstract.
-summary: "We formalize the problem of identifyign and erasing concept subspaces, encoding concepts such as gender. We show that existing techniques are not optimal for this task, and propose effective solutions."
+summary: "We formalize the problem of identifying and erasing concept subspaces, encoding concepts such as gender. We show that existing techniques are not optimal for this task, and propose effective solutions."
 
 tags: []
 categories: []

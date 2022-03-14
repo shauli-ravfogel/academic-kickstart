@@ -1,14 +1,14 @@
 ---
-# Documentation: Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction
+# Documentation: BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models
 
-title: "Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction"
-authors: ["Shauli Ravfogel*", "Grusha Prasad*", "Tal Linzen", "Yoav Goldberg"]
+title: "LinBitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-modelsasure"
+authors: ["Elad Ben-Zaken", "Shauli Ravfogel", "Yoav Goldberg"]
                
-date: 2021
+date: 2022
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2021-09-03T15:16:19+02:00
+publishDate: 2022-01-03T15:16:19+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -17,13 +17,13 @@ publishDate: 2021-09-03T15:16:19+02:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction"
+publication: "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models"
 publication_short: ""
 
-abstract: "Which linguistic factors drive the behavior of neural LMs? we propose a method for the generation of counterfactual representations by altering how a given feature is encoded, while leaving intact all other aspects of the original representation. By measuring the change in a model's word prediction behavior when these counterfactual representations are substituted for the original ones, we can draw conclusions about the causal effect of the linguistic feature in question on the model's behavior."
+abstract: We show that with small-to-medium training data, fine-tuning only the bias terms (or a subset of the bias terms) of pre-trained BERT models is competitive with (and sometimes better than) fine-tuning the entire model. For larger data, bias-only fine-tuning is competitive with other sparse fine-tuning methods. Besides their practical utility, these findings are relevant for the question of understanding the commonly-used process of finetuning: they support the hypothesis that finetuning is mainly about exposing knowledge induced by language-modeling training, rather than learning new task-specific linguistic knowledge. 
 
 # Summary. An optional shortened abstract.
-summary: "We propoes an intervention-based approach that generates counterfactuals in representation space to study the causal effect ot linguistic propeties on the behavior of neural models."
+summary: "We show that with small-to-medium training data, fine-tuning only the bias terms (or a subset of the bias terms) of pre-trained BERT models is competitive with (and sometimes better than) fine-tuning the entire model. "
 
 tags: []
 categories: []
@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://aclanthology.org/2021.conll-1.15.pdf/"
+url_pdf: "https://arxiv.org/pdf/2106.10199.pdf/"
 url_code: 
 url_dataset:
 url_poster:
