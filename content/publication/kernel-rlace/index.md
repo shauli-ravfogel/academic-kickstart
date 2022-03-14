@@ -2,7 +2,7 @@
 # Documentation: Adversarial Concept Erasure in Kernel Space
 
 title: "Adversarial Concept Erasure in Kernel Space"
-authors: ["Shauli Ravfogel", "Michael Twiton", "Yoav Goldberg", "Ryan Cotterell"]
+authors: ["Shauli Ravfogel", "Francisco Vargas", "Yoav Goldberg", "Ryan Cotterell"]
                
 date: 2022
 doi: ""
