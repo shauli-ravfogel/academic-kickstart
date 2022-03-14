@@ -20,6 +20,9 @@ social:
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/ravfogel
+  - icon: semantic-scholar
+    icon_pack: ai
+    link: https://www.semanticscholar.org/author/Shauli-Ravfogel/51432464
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=x09r-T8AAAAJ&hl=en&oi=ao
@@ -45,6 +48,6 @@ user_groups:
   - Researchers
   - Visitors
 ---
-Hi! I am a first year PhD student in the Natural Language Processing Lab at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
+Hi! I am a second year PhD student in the Natural Language Processing Lab at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
 
-I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utillize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts.
+I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utillize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts. During my masters, I have focused on the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have been mainly working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic sidetours. 
