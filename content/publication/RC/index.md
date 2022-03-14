@@ -1,29 +1,29 @@
 ---
-# Documentation: Linear Adversarial Concept Erasure
+# Documentation: Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction
 
-title: "Linear Adversarial Concept Erasure"
-authors: ["Shauli Ravfogel", "Michael Twiton", "Yoav Goldberg", "Ryan Cotterell"]
+title: "Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction"
+authors: ["Shauli Ravfogel*", "Grusha Prasad*", "Tal Linzen", "Yoav Goldberg"]
                
-date: 2022
+date: 2021
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2022-01-03T15:16:19+02:00
+publishDate: 2021-09-03T15:16:19+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Linear Adversarial Concept Erasure"
+publication: "Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction"
 publication_short: ""
 
-abstract: "We formalize the problem of identifying and erasing concept subspaces -- linear subspaces whose removal prevent linear models from recovering some concept, such as gender, from the representation. We show that existing techniques are not optimal for this task, and propose effective solutions."
+abstract: "Which linguistic factors drive the behavior of neural LMs? we propose a method for the generation of counterfactual representations by altering how a given feature is encoded, while leaving intact all other aspects of the original representation. By measuring the change in a model's word prediction behavior when these counterfactual representations are substituted for the original ones, we can draw conclusions about the causal effect of the linguistic feature in question on the model's behavior."
 
 # Summary. An optional shortened abstract.
-summary: "We formalize the problem of identifyign and erasing concept subspaces, encoding concepts such as gender. We show that existing techniques are not optimal for this task, and propose effective solutions."
+summary: "We propoes an intervention-based approach that generates counterfactuals in representation space to study the causal effect ot linguistic propeties on the behavior of neural models."
 
 tags: []
 categories: []
@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://arxiv.org/pdf/2201.12091.pdf/"
+url_pdf: "https://arxiv.org/pdf/2105.06965.pdf/"
 url_code: 
 url_dataset:
 url_poster:
