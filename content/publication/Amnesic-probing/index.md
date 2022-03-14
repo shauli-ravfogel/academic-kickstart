@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://arxiv.org/abs/2006.00995"
+url_pdf: "https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00359/1924189/tacl_a_00359.pdf"
 url_code: 
 url_dataset:
 url_poster:
