@@ -4,7 +4,7 @@
 title: "Linear Adversarial Concept Erasure"
 authors: ["Shauli Ravfogel", "Michael Twiton", "Yoav Goldberg", "Ryan Cotterell"]
                
-date: 2022
+date: 2022-01-02
 doi: ""
 
 # Schedule page publish date (NOT publication's date).

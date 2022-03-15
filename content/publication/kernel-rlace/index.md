@@ -4,7 +4,7 @@
 title: "Adversarial Concept Erasure in Kernel Space"
 authors: ["Shauli Ravfogel", "Francisco Vargas", "Yoav Goldberg", "Ryan Cotterell"]
                
-date: 2022
+date: 2022-01-03
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
