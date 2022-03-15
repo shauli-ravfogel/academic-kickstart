@@ -23,7 +23,7 @@ publication_short: ""
 abstract: "We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of certain nonlinear adversaries to recover the concept. Interestingly, our findings suggest that the division between linear and nonlinear models is overly simplistic: when considering the concept of binary gender and its neutralization, we do not find a single kernel space that exclusively contains all the concept-related information."
 
 # Summary. An optional shortened abstract.
-summary: "We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of ceratin nonlinear adversaries to recover the concept of interest; at the same time, it is difficult to guard against arbitrary nonlinear adversaries."
+summary: "Can we prevent nonlnear classifiers from recovering sensitive information, such as gender, from neural representations of texts? We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of ceratin nonlinear adversaries to recover the concept of interest; at the same time, it is difficult to guard against arbitrary nonlinear adversaries."
 
 tags: []
 categories: []

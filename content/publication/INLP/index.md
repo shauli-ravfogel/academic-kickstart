@@ -20,11 +20,11 @@ publication_types: ["1"]
 publication: "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection"
 publication_short: ""
 
-abstract: We propose a data-driven projection method to selectively remove information from neural representation.
+abstract: "The ability to control for the kinds of information encoded in neural representation has a variety of use cases, especially in light of the challenge of interpreting these models. We present Iterative Null-space Projection (INLP), a novel method for removing information from neural representations. Our method is based on repeated training of linear classifiers that predict a certain property we aim to remove, followed by projection of the representations on their null-space. By doing so, the classifiers become oblivious to that target property, making it hard to linearly separate the data according to it. While applicable for multiple uses, we evaluate our method on bias and fairness use-cases, and show that our method is able to mitigate bias in word embeddings, as well as to increase fairness in a setting of multi-class classification."
+
 
 # Summary. An optional shortened abstract.
-summary: ""
-
+summary: "Can we edit representations derived from neural representations in a post-hoc manner? We propose a data-driven projection method to selectively remove information from neural representation. When evaluated in the context of neutralizing gender information, we demonstrate that the method is highly effective in reducing bias while maintaining interpretability and tractability."
 tags: []
 categories: []
 featured: false

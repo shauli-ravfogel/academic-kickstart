@@ -26,7 +26,7 @@ Consistency of a model—that is, the invariance of its behavior under meaning-p
 "
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "We study the consistency of Pretrained Language Models (PLMs) with respect to factual knowledge."
 
 tags: []
 categories: []
