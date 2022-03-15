@@ -4,8 +4,8 @@
 title: "Counterfactual Interventions Reveal the Causal Effect of Relative Clause Representations on Agreement Prediction"
 authors: ["Shauli Ravfogel*", "Grusha Prasad*", "Tal Linzen", "Yoav Goldberg"]
                
-date: 2021
-doi: ""
+date: 2021-01-12
+doi: "10.18653/v1/2021.conll-1.15"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2021-09-03T15:16:19+02:00
@@ -37,8 +37,8 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://aclanthology.org/2021.conll-1.15.pdf/"
-url_code: 
+url_pdf: "https://aclanthology.org/2021.conll-1.15.pdf"
+url_code: "https://github.com/shauli-ravfogel/RC-INLP"
 url_dataset:
 url_poster:
 url_project:

@@ -37,8 +37,8 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://arxiv.org/pdf/2201.12091.pdf/"
-url_code: 
+url_pdf: "https://arxiv.org/pdf/2201.12091.pdf"
+url_code: "https://github.com/shauli-ravfogel/RLACE"
 url_dataset:
 url_poster:
 url_project:

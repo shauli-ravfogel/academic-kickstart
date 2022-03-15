@@ -5,7 +5,7 @@ title: "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projec
 authors: ["Shauli Ravfogel", "Yanai Elazar", "Hila Gonen", "Michael Twiton", "Yoav Goldberg"]
                
 date: 2020
-doi: ""
+doi: "10.18653/v1/2020.acl-main.647"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-01-03T15:16:19+02:00
