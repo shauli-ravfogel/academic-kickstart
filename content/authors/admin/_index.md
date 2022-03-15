@@ -51,4 +51,4 @@ I am interested in representation learning, analysis and interpretability of neu
 
 In my  master's, I have been studying the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have been mainly working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic sidetours. 
 
-My CV is available in [here](cv/cv.pdf).
+My CV is available [here](cv/cv.pdf).
