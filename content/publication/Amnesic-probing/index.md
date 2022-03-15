@@ -20,10 +20,12 @@ publication_types: ["2"]
 publication: "Amnesic Probing: Behavioral Explanation with Amnesic Counterfactuals"
 publication_short: ""
 
-abstract: We propose a complementary probing technique which relies on behavioral interventions, focused on concepts we identify with Iterative Nullspace Projection (INLP).
+abstract: "A growing body of work makes use of probing to investigate the working of neural models, often considered black boxes. Recently, an ongoing debate emerged surrounding the limitations of the probing paradigm. In this work, we point out the inability to infer behavioral conclusions from probing results and offer an alternative method that focuses on how the information is being used, rather than on what information is encoded. Our method, Amnesic Probing, follows the intuition that the utility of a property for a given task can be assessed by measuring the influence of a causal intervention that removes it from the representation.
+
+Equipped with this new analysis tool, we can ask questions that were not possible before, e.g. is part-of-speech information important for word prediction? We perform a series of analyses on BERT to answer these types of questions. Our findings demonstrate that conventional probing performance is not correlated to task importance, and we call for increased scrutiny of claims that draw behavioral or causal conclusions from probing results. "
 
 # Summary. An optional shortened abstract.
-summary: "We propose a complementary probing technique which relies on behavioral interventions, focused on concepts we identify with Iterative Nullspace Projection (INLP)."
+summary: "Probing neural models for linguistic knowledge does not allow us to draw causal conclusions on the relation between the probed concepts and the behavior of the model. We propose a complementary probing technique which relies on behavioral interventions, focused on concepts we identify with Iterative Nullspace Projection (INLP)."
 
 tags: []
 categories: []
