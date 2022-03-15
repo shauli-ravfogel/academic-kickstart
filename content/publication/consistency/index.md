@@ -2,9 +2,9 @@
 # Documentation: Measuring and Improving Consistency in Pretrained Language Models
 
 title: "Measuring and Improving Consistency in Pretrained Language Models"
-authors: ["Alon Jacovi", "Swabha Swayamdipta", "Shauli Ravfogel", "Yanai Elazar", "Yejin Choi", "Yoav Goldberg"]
+authors: ["Yanai Elazar","Nora Kassner","Shauli Ravfogel","Abhilasha Ravichander","Eduard Hovy","Hinrich Schütze","Yoav Goldberg"]
                
-date: 2021-01-10
+date: 2021-12-01
 doi: "10.18653/v1/2021.emnlp-main.120"
 
 # Schedule page publish date (NOT publication's date).

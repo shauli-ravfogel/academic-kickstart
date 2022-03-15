@@ -4,7 +4,7 @@
 title: "Contrastive Explanations for Model Interpretability"
 authors: ["Alon Jacovi", "Swabha Swayamdipta", "Shauli Ravfogel", "Yanai Elazar", "Yejin Choi", "Yoav Goldberg"]
                
-date: 2021-01-11
+date: 2021-09-01
 doi: "10.18653/v1/2021.emnlp-main.120"
 
 # Schedule page publish date (NOT publication's date).

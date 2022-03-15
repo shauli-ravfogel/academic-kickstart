@@ -4,8 +4,8 @@
 title: "It’s not Greek to mBERT: Inducing Word-Level Translations from Multilingual BERT"
 authors: ["Hila Gonen", "Shauli Ravfogel", "Yanai Elazar", "Yoav Goldberg"]
                
-date: 2020
-doi: ""
+date: 2020-11-01
+doi: "https://aclanthology.org/2020.blackboxnlp-1.5"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-01-03T15:16:19+02:00
@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: 
+url_pdf: "https://aclanthology.org/2020.blackboxnlp-1.5.pdf"
 url_code: 
 url_dataset:
 url_poster:

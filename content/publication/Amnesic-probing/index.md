@@ -4,7 +4,7 @@
 title: "Amnesic Probing: Behavioral Explanation with Amnesic Counterfactuals"
 authors: ["Yanai Elazar", "Shauli Ravfogel", "Alon Jacovi", "Yoav Goldberg"]
                
-date: 2020
+date: 2021-03-01
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -23,7 +23,7 @@ publication_short: ""
 abstract: We propose a complementary probing technique which relies on behavioral interventions, focused on concepts we identify with Iterative Nullspace Projection (INLP).
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "We propose a complementary probing technique which relies on behavioral interventions, focused on concepts we identify with Iterative Nullspace Projection (INLP)."
 
 tags: []
 categories: []
@@ -38,7 +38,7 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00359/1924189/tacl_a_00359.pdf"
-url_code: 
+url_code: "https://github.com/yanaiela/amnesic_probing"
 url_dataset:
 url_poster:
 url_project:

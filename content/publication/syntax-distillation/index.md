@@ -5,7 +5,7 @@ title: "Unsupervised Distillation of Syntactic Information from Contextualized W
 authors: ["Shauli Ravfogel*", "Yanai Elazar*", "Jacob Goldberger", "Yoav Goldberg"]
                
 date: 2019
-doi: ""
+doi: "10.18653/v1/2020.blackboxnlp-1.9"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-01-03T15:16:19+02:00
@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://arxiv.org/abs/2010.05265
+url_pdf: "https://aclanthology.org/2020.blackboxnlp-1.9.pdf"
 url_code: 
 url_dataset:
 url_poster:

@@ -4,8 +4,8 @@
 title: "Studying the Inductive Biases of RNNs with Synthetic Variations of Natural Languages"
 authors: ["Shauli Ravfogel", "Yoav Goldberg", "Tal Linzen"]
                
-date: 2019
-doi: ""
+date: 2019-06-01
+doi: "10.18653/v1/N19-1356"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-01-03T15:16:19+02:00
@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://www.aclweb.org/anthology/N19-1356/"
+url_pdf: "https://www.aclweb.org/anthology/N19-1356"
 url_code: "https://github.com/shauli-ravfogel/rnn_typology"
 url_dataset:
 url_poster:
