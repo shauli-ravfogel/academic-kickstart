@@ -50,7 +50,7 @@ url_video: "https://slideslive.com/38929453/null-it-out-guarding-protected-attri
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
+  caption: "Geometric illustration for the nullspace projection operation in the basis of INLP."
   focal_point: ""
   preview_only: false
 

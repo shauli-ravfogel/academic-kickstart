@@ -6,7 +6,7 @@ superuser: true
 authors:
   - admin
 title:
-role: Computer Science Graduate Student
+role: Computer Science PhD Student
 avatar_filename: img.jpg
 bio: ""
 interests:
@@ -45,6 +45,8 @@ user_groups:
   - Researchers
   - Visitors
 ---
-Hi! I am a second year PhD student in the Natural Language Processing Lab at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
+Hey! I am a second year PhD student in the [Natural Language Processing Lab](https://biu-nlp.github.io/) at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at AI2 Israel.
 
-I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utillize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts. During my masters, I have focused on the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have been mainly working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic sidetours. 
+I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utillize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts. 
+
+In my masters, I have been studying the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have been mainly working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic sidetours. 
