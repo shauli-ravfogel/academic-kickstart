@@ -25,7 +25,7 @@ abstract: "Modern neural models trained on textual data rely on pre-trained repr
 We formulate the problem of identifying and erasing a linear subspace that corresponds to a given concept, in order to prevent linear predictors from recovering the concept. We model this problem as a constrained, linear minimax game, and show that existing solutions are generally not optimal for this task. We derive a closed-form solution for certain objectives, and propose a convex relaxation, R-LACE, that works well for others. When evaluated in the context of binary gender removal, the method recovers a low-dimensional subspace whose removal mitigates bias by intrinsic and extrinsic evaluation. We show that the method -- despite being linear -- is highly expressive, effectively mitigating bias in deep nonlinear classifiers while maintaining tractability and interpretability. "
 
 # Summary. An optional shortened abstract.
-summary: "Can we prevent a model from encoding arbitrary concepts, such as gender, in its representations? We formulate the problem of identifying and erasing concept subspaces -- linear subspaces whose removal prevent linear classification of concepts. We show that existing techniques are not optimal for this task, and propose effective solutions."
+summary: "Can we prevent a model from encoding arbitrary concepts, such as gender, in its representations? We formulate the problem of identifying and erasing concept subspaces -- linear subspaces whose removal prevents linear classification of concepts. We formulate the problem as a constrained instance of a general adversarial problem, show that existing techniques are not optimal for this task, and propose effective solutions."
 
 tags: []
 categories: []
