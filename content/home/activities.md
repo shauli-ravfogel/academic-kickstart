@@ -12,7 +12,8 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
-* May-Jone 2022: Visiting at ETH Zurich (Again!)
+* May 2022: Our paper [Analyzing Gender Representation in Multilingual Models](https://aclanthology.org/2022.repl4nlp-1.8/) has received the best-paper award at RepL4NLP@ACL22
+* May-June 2022: Visiting ETH Zurich (Again!)
 * October 2021-February 2022: Teaching an Introduction to Machine Learning course for brain science students.
 * October 2021: invited talk at the SIGTYP Lecture Series ([recording](https://www.youtube.com/watch?v=y-2B2y4jI8U&t=21s))
 * August-Septemebr 2021: Visiting student at Prof. Ryan Cotterell's group, ETH Zurich.                    
