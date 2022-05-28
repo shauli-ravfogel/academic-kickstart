@@ -1,10 +1,10 @@
 ---
 # Documentation: Linear Adversarial Concept Erasure
 
-title: "Linear Adversarial Concept Erasure"
-authors: ["Shauli Ravfogel", "Michael Twiton", "Yoav Goldberg", "Ryan Cotterell"]
+title: "Analyzing Gender Representation in Multilingual Models"
+authors: ["Hila Gonen", "Shauli Ravfogel", "Yoav Goldberg"]
                
-date: 2022-01-02
+date: 2022-01-05
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -14,18 +14,15 @@ publishDate: 2022-01-04T15:16:19+02:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Linear Adversarial Concept Erasure"
+publication: "Analyzing Gender Representation in Multilingual Models"
 publication_short: ""
 
-abstract: "Modern neural models trained on textual data rely on pre-trained representations that emerge without direct supervision. As these representations are increasingly being used in real-world applications, the inability to control their content becomes an increasingly important problem.
+abstract: "Multilingual language models were shown to allow for nontrivial transfer across scripts and languages. In this work, we study the structure of the internal representations that enable this transfer. We focus on the representations of gender distinctions as a practical case study, and examine the extent to which the gender concept is encoded in shared subspaces across different languages. Our analysis shows that gender representations consist of several prominent components that are shared across languages, alongside language-specific components. The existence of language-independent and language-specific components provides an explanation for an intriguing empirical observation we make”:" while gender classification transfers well across languages, interventions for gender removal trained on a single language do not transfer easily to others. "
 
-We formulate the problem of identifying and erasing a linear subspace that corresponds to a given concept, in order to prevent linear predictors from recovering the concept. We model this problem as a constrained, linear minimax game, and show that existing solutions are generally not optimal for this task. We derive a closed-form solution for certain objectives, and propose a convex relaxation, R-LACE, that works well for others. When evaluated in the context of binary gender removal, the method recovers a low-dimensional subspace whose removal mitigates bias by intrinsic and extrinsic evaluation. We show that the method -- despite being linear -- is highly expressive, effectively mitigating bias in deep nonlinear classifiers while maintaining tractability and interpretability. "
-
-# Summary. An optional shortened abstract.
-summary: "Can we prevent a model from encoding arbitrary concepts, such as gender, in its representations? We formulate the problem of identifying and erasing concept subspaces -- linear subspaces whose removal prevents linear classification of concepts. We formulate the problem as a constrained instance of a general adversarial problem, show that existing techniques are not optimal for this task, and propose effective solutions."
+summary: "We study the extent to which the concept of gender is represented cross-lingually in multilingual models."
 
 tags: []
 categories: []
@@ -39,8 +36,8 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://arxiv.org/pdf/2201.12091.pdf"
-url_code: "https://github.com/shauli-ravfogel/RLACE"
+url_pdf: "https://aclanthology.org/2022.repl4nlp-1.8.pdf"
+url_code: "https://github.com/gonenhila/multilingual_gender"
 url_dataset:
 url_poster:
 url_project:
