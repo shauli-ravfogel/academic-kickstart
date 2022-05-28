@@ -22,7 +22,7 @@ publication_short: ""
 
 abstract: "Multilingual language models were shown to allow for nontrivial transfer across scripts and languages. In this work, we study the structure of the internal representations that enable this transfer. We focus on the representations of gender distinctions as a practical case study, and examine the extent to which the gender concept is encoded in shared subspaces across different languages. Our analysis shows that gender representations consist of several prominent components that are shared across languages, alongside language-specific components. The existence of language-independent and language-specific components provides an explanation for an intriguing empirical observation we make”:" while gender classification transfers well across languages, interventions for gender removal trained on a single language do not transfer easily to others. "
 
-summary: "We study the extent to which the concept of gender is represented cross-lingually in multilingual models."
+summary: We study the extent to which the concept of gender is represented cross-lingually in multilingual models.
 
 tags: []
 categories: []
@@ -49,7 +49,7 @@ url_video:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Identification and removal of gender information from GloVe representations."
+  caption: ""
   focal_point: "Center"
   preview_only: false
 
