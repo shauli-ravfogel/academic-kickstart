@@ -37,7 +37,7 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://aclanthology.org/2022.repl4nlp-1.8.pdf"
-url_code: "https://github.com/gonenhila/multilingual_gender"
+url_code: ""
 url_dataset:
 url_poster:
 url_project:
