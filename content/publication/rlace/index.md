@@ -14,7 +14,7 @@ publishDate: 2022-01-04T15:16:19+02:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Linear Adversarial Concept Erasure"
@@ -40,7 +40,7 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://arxiv.org/pdf/2201.12091.pdf"
-url_code: "https://github.com/shauli-ravfogel/RLACE"
+url_code: "https://github.com/shauli-ravfogel/rlace-icml"
 url_dataset:
 url_poster:
 url_project:
