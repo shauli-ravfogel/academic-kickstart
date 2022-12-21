@@ -1,5 +1,5 @@
 ---
-# Documentation: Adversarial Concept Erasure in Kernel Space
+# Documentation: Kernelized Concept Erasure
 
 title: "Adversarial Concept Erasure in Kernel Space"
 authors: ["Shauli Ravfogel", "Francisco Vargas", "Yoav Goldberg", "Ryan Cotterell"]
@@ -14,7 +14,7 @@ publishDate: 2022-01-05T15:16:19+02:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Adversarial Concept Erasure in Kernel Space"
