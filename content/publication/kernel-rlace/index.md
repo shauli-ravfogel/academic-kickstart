@@ -23,7 +23,8 @@ publication_short: ""
 abstract: "We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of certain nonlinear adversaries to recover the concept. Interestingly, our findings suggest that the division between linear and nonlinear models is overly simplistic: when considering the concept of binary gender and its neutralization, we do not find a single kernel space that exclusively contains all the concept-related information."
 
 # Summary. An optional shortened abstract.
-summary: "Neural representations of text can encode human-interpretable concepts, such as gender, in a nonlinear manner. We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of ceratin nonlinear adversaries to recover the concept of interest; at the same time, it is difficult to guard against arbitrary nonlinear adversaries."
+summary: "Neural representations of text can en
+ human-interpretable concepts, such as gender, in a nonlinear manner. We propose a kernalization of the linear concept-removal objective, and show that it is effective in guarding against the ability of ceratin nonlinear adversaries to recover the concept of interest; at the same time, it is difficult to guard against arbitrary nonlinear adversaries."
 
 tags: []
 categories: []
@@ -38,9 +39,9 @@ featured: false
 #   icon: twitter
 
 url_pdf: "https://arxiv.org/pdf/2201.12191.pdf"
-url_code: 
+url_code: "https://github.com/shauli-ravfogel/adv-kernel-removal"
 url_dataset:
-url_poster:
+url_poster: "https://docs.google.com/presentation/d/1rqTFkka1roeASnzMP1FoR3IjpopFIqfO20Y0X8WXJUw/edit?usp=sharing"
 url_project:
 url_slides:
 url_source:

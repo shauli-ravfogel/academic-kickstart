@@ -42,9 +42,9 @@ featured: false
 url_pdf: "https://arxiv.org/pdf/2201.12091.pdf"
 url_code: "https://github.com/shauli-ravfogel/rlace-icml"
 url_dataset:
-url_poster:
+url_poster: "https://docs.google.com/presentation/d/1KCO9QK9243HTYxs5xvOXpJWlNXbpzdteJ-RZMAUJGEc/edit?usp=sharing"
 url_project:
-url_slides:
+url_slides: "https://docs.google.com/presentation/d/15dwWs3X6NC_3OIE7j6-Yq1-JE9fQDVgvql0WN0EErU0/edit?usp=sharing"
 url_source:
 url_video: 
 

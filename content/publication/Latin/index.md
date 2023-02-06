@@ -42,7 +42,7 @@ url_code:
 url_dataset:
 url_poster:
 url_project:
-url_slides:
+url_slides: "https://docs.google.com/presentation/d/1OdIpaIX4R6Y5lS4jTSKYsG7YoqM-1v1FWUkft7avjAE/edit?usp=sharing"
 url_source:
 url_video:
 
