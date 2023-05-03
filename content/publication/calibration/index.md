@@ -1,7 +1,7 @@
 ---
 # Documentation: Conformal Nucleus Sampling
 
-title: "Linear Guardedness and its Implications"
+title: "Conformal Nucleus Sampling"
 authors: ["Shauli Ravfogel", "Yoav Goldberg", "Jacob Goldberger"]
                
 date: 2023-01-05
