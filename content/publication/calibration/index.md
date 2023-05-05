@@ -38,7 +38,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: ""
+url_pdf: "https://arxiv.org/abs/2305.02633"
 url_code: "https://github.com/shauli-ravfogel/conformal-prediction"
 url_dataset:
 url_poster: ""
