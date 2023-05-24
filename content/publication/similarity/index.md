@@ -4,7 +4,7 @@
 title: "Retrieving Texts based on Abstract Descriptions"
 authors: ["Shauli Ravfogel", "Valentina Pyatkin", "Amir DN Cohen", "Avshalom Manevich", "Yoav Goldberg"]
                
-date: 2023-23-05
+date: 2023-03-05
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
