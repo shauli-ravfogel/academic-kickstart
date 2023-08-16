@@ -12,8 +12,8 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
-* July 2023: invited talks at J.P Morgan.
-* Summer 2023: Internship at Bloomberg London
+* July 2023: Invited talks at J.P Morgan and DeepMind.
+* Summer 2023: Internship at Bloomberg London.
 * December 2022: Happy to have received the [Bloomberg Data Science PhD Fellowship](https://www.bloomberg.com/company/stories/introducing-the-fifth-cohort-of-bloomberg-data-science-ph-d-fellows-2022-2023/?linkId=194502981)!
 * May 2022: Our paper [Analyzing Gender Representation in Multilingual Models](https://aclanthology.org/2022.repl4nlp-1.8/) has received the best-paper award at RepL4NLP@ACL22.
 * May-June 2022: Visiting ETH Zurich (Again!)
