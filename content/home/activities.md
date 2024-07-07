@@ -12,6 +12,7 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
+* June 2024: Happy to have received the Blavatnik Prize for Outstanding Israeli Doctoral Students in Computer Science.
 * July 2023: Invited talks at J.P Morgan and DeepMind.
 * Summer 2023: Internship at Bloomberg London.
 * December 2022: Happy to have received the [Bloomberg Data Science PhD Fellowship](https://www.bloomberg.com/company/stories/introducing-the-fifth-cohort-of-bloomberg-data-science-ph-d-fellows-2022-2023/?linkId=194502981)!
