@@ -2,13 +2,13 @@
 # Documentation: The Curious Case of Hallucinatory (Un)answerability: Finding Truths in the Hidden States of Over-Confident Large Language Models
 
 title: "The Curious Case of Hallucinatory (Un)answerability: Finding Truths in the Hidden States of Over-Confident Large Language Models"
-authors: ["Aviv Slobodkin", "Omer Goldman*", "Avi Caciularu", "Ido Dagan", "Shauli Ravfogel"]
+authors: ["Aviv Slobodkin", "Omer Goldman", "Avi Caciularu", "Ido Dagan", "Shauli Ravfogel"]
 
-date: 2023-23-12
+date: 2023-29-12
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2023-23-12T15:16:19+02:00
+publishDate: 2023-29-12T15:16:19+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;

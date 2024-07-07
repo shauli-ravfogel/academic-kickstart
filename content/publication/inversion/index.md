@@ -2,9 +2,9 @@
 # Documentation: Natural Language Counterfactuals through Representation Surgery
 
 title: "Natural Language Counterfactuals through Representation Surgery"
-authors: ["Matan Avitan", " Ryan Cotterell*", "Yoav Goldberg", "Shauli Ravfogel"]
+authors: ["Matan Avitan", " Ryan Cotterell", "Yoav Goldberg", "Shauli Ravfogel"]
 
-date: 2023-23-05
+date: 2024-23-05
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
