@@ -4,11 +4,11 @@
 title: "Representation Surgery: Theory and Practice of Affine Steering"
 authors: ["Shashwat Singh*", "Shauli Ravfogel*", "Jonathan Herzig", " Roee Aharoni", "Ryan Cotterell", "Ponnurangam Kumaraguru"]
 
-date: 2024-03-06
+date: 2024-06-03
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2024-23-06T15:16:19+02:00
+publishDate: 2024-06-03T15:16:19+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
