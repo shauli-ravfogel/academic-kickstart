@@ -12,6 +12,8 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
+* September - December 2024: Visting at ETH Zurich.
+* September 2024: I have received the [IAAI Best PhD Thesis Award](https://iaai.org.il/prizes/).
 * June 2024: Happy to have received the Blavatnik Prize for Outstanding Israeli Doctoral Students in Computer Science.
 * July 2023: Invited talks at J.P Morgan and DeepMind.
 * Summer 2023: Internship at Bloomberg London.
