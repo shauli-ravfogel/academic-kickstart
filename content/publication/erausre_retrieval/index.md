@@ -1,5 +1,7 @@
 ---
-# Documentation: Language Concept Erasure for Language-invariant Dense Retrieval: title: "Language Concept Erasure for Language-invariant Dense Retrieval"
+# Documentation: Language Concept Erasure for Language-invariant Dense Retrieval:
+ 
+title: "Language Concept Erasure for Language-invariant Dense Retrieval"
 authors: ["Zhiqi Huang", "Puxuan Yu", "Shauli Ravfogel", "James Allan"]
 
 date: 2024-12-23
