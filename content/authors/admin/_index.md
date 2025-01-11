@@ -45,10 +45,8 @@ user_groups:
   - Researchers
   - Visitors
 ---
-Hey! I am a fourth (and final!) year PhD student in the [Natural Language Processing Lab](https://biu-nlp.github.io/) at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). I am also a research intern at Google Research Israel.
+Hey! I am a Faculty Fellow (a linear combination of a faculty and a postdoc) at the NYU Center of Data Science. I had earned my PhD from the [Natural Language Processing Lab](https://biu-nlp.github.io/) at Bar-Ilan University, supervised by [prof. Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/). 
 
-I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utilize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts. 
-
-In my  master's, I have been studying the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have mainly been working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic side tours. 
+I am interested in representation learning, analysis and interpretability of neural models, and the syntactic abilities of NNs. Specifically, I am interested in the way neural models learn distributed representations that encode structured information, in the way they utilize those representatons to solve tasks, and in our ability to control their content and map them back to interpretable concepts. In my  master's, I have been studying the ability of NNs to acquire syntax without explicit supervision. During my PhD, I have mainly been working on developing techniques to selectively control the information encoded in neural representations, with some fun linguistic side tours.
 
 My CV is available [here](cv/cv.pdf).
