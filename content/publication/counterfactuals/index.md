@@ -1,7 +1,7 @@
 ---
 # Documentation: https://arxiv.org/abs/2411.07180
 
-title: "https://arxiv.org/abs/2411.07180"
+title: "Gumbel Counterfactual Generation From Language Models"
 authors: ["Shauli Ravfogel", "Anej Svete", "Vésteinn Snæbjarnarson", "Ryan Cotterell"]
 
 date: 2024-12-27
