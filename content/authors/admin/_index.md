@@ -1,12 +1,12 @@
 ---
 organizations:
-  - name: Bar Ilan University
+  - name: NYU
     url: ""
 superuser: true
 authors:
   - admin
 title:
-role: Computer Science PhD Student
+role: Faculty Fellow
 avatar_filename: img.jpg
 bio: ""
 interests:
