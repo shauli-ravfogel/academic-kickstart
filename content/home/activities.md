@@ -12,6 +12,8 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
+* Spring semester 2025: Teaching a new course on causality and interpretability of LMs.
+* January 2025: Started as a Faculty Fellow at NYU Center of Data Science!
 * September - December 2024: Visting at ETH Zurich.
 * September 2024: I have received the [IAAI Best PhD Thesis Award](https://iaai.org.il/prizes/).
 * June 2024: Happy to have received the Blavatnik Prize for Outstanding Israeli Doctoral Students in Computer Science.
