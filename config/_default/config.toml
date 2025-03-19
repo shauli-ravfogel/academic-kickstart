@@ -107,3 +107,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "authors"
     weight = 20.0
+
+
+[[custom_icons]]
+  id = "bluesky"
+  svg = "assets/images/bluesky.svg"
+  filter = false
