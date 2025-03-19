@@ -17,6 +17,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: "#contact"
+  - icon = "img/Bluesky_Logo.svg.png"
+    icon_pack = "custom"
+    link = https://bsky.app/profile/shauli.bsky.social
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/ravfogel
