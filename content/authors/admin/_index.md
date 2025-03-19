@@ -17,7 +17,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: "#contact"
-  - icon: bluesky.png
+  - icon: bluesky
     icon_pack: custom
     link: https://bsky.app/profile/shauli.bsky.social
   - icon: twitter
