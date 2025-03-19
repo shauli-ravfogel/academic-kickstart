@@ -18,7 +18,7 @@ social:
     icon_pack: fas
     link: "#contact"
   - icon = img/bluesky.png
-    icon_pack = "custom"
+    icon_pack = custom
     link = https://bsky.app/profile/shauli.bsky.social
   - icon: twitter
     icon_pack: fab
