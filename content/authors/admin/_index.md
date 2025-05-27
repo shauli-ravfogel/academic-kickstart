@@ -48,9 +48,9 @@ user_groups:
   - Researchers
   - Visitors
 ---
-Hey! I am a Postdoctoral Researcher and Faculty Fellow (a linear combination of a faculty and a postdoc) at the NYU Center of Data Science. I earned my PhD from the [Natural Language Processing Lab](https://biu-nlp.github.io/) at Bar-Ilan University, supervised by Prof. Yoav Goldberg.
+Hey! I am a Postdoctoral Researcher and Faculty Fellow at the NYU Center of Data Science. I earned my PhD from the [Natural Language Processing Lab](https://biu-nlp.github.io/) at Bar-Ilan University, supervised by Prof. Yoav Goldberg.
 
-My research focuses on analyzing and controlling the internal representations of generative models, particularly language models. I study how neural networks encode structured information, use it to solve tasks, and represent interpretable concepts. I try---sometimes even successfully---to develop mathematically-principled approaches to interpretability.
+My research focuses on analyzing and controlling the internal representations of generative models, particularly language models. I study how neural networks encode structured information, use it to solve tasks, and represent interpretable concepts. I try---sometimes even successfully---to develop mathematically-principled approaches to interpretability. I am particularly interested in understanding how simple structures, such as concept-aligned linear subspaces, emerge as a byproduct of the language modeling objective, and how we can use such structures to steer and control models.
 
 During my PhD, I’ve worked on techniques to selectively control information in neural representations, with some fun linguistic side tours. More recently, I’ve explored framing LMs as causal models and tackling questions of learnability in a controlled setting.
 
