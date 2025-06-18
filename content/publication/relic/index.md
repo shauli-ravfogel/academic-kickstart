@@ -4,7 +4,7 @@
 title: "RELIC: Evaluating Compositional Instruction Following via Language Recognition"
 authors: ["Jackson Petty", "Michael Y. Hu", "Wentao Wang", "Shauli Ravfogel", "William Merrill", "Tal Linzen”]
 
-date: 2025--06-01
+date: 2025-06-01
 doi: ""
 
 # Schedule page publish date (NOT publication's date).

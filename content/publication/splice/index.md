@@ -4,7 +4,7 @@
 title: "Preserving Task-Relevant Information Under Linear Concept Removal"
 authors: ["Floris Holstege*”, “Shauli Ravfogel*”, “Bram Wouters”]
 
-date: 2025--06-02
+date: 2025-06-02
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
