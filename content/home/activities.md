@@ -12,6 +12,7 @@ title = "Recent Activities"
 subtitle = ""
 
 +++
+* October 2025: I will attend the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the UK AISI Alignment Conference!
 * Spring semester 2025: Teaching a new [course](https://docs.google.com/document/d/1OK9eL-du3RNQ2wcSiDLOpUJjYhehvwIEvP0IJHnFRv8/edit?usp=sharing) on causality and interpretability of LMs.
 * January 2025: Started as a Faculty Fellow at NYU Center of Data Science!
 * September - December 2024: Visting at ETH Zurich.
