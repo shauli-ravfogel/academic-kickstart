@@ -15,7 +15,7 @@ subtitle = ""
 * October 2025: I will attend the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the UK AISI Alignment Conference!
 * Spring semester 2025: Teaching a new [course](https://docs.google.com/document/d/1OK9eL-du3RNQ2wcSiDLOpUJjYhehvwIEvP0IJHnFRv8/edit?usp=sharing) on causality and interpretability of LMs.
 * January 2025: Started as a Faculty Fellow at NYU Center of Data Science!
-* September - December 2024: Visting at ETH Zurich.
+* September - December 2024: Visiting at ETH Zurich.
 * September 2024: I have received the [IAAI Best PhD Thesis Award](https://iaai.org.il/prizes/).
 * June 2024: Happy to have received the Blavatnik Prize for Outstanding Israeli Doctoral Students in Computer Science.
 * July 2023: Invited talks at J.P Morgan and DeepMind.
@@ -25,7 +25,7 @@ subtitle = ""
 * May-June 2022: Visiting ETH Zurich (Again!)
 * October 2021-February 2022: Teaching an Introduction to Machine Learning course for brain science students.
 * October 2021: invited talk at the SIGTYP Lecture Series ([recording](https://www.youtube.com/watch?v=y-2B2y4jI8U&t=21s))
-* August-Septemebr 2021: Visiting student at Prof. Ryan Cotterell's group, ETH Zurich.                    
+* August-September 2021: Visiting student at Prof. Ryan Cotterell's group, ETH Zurich.                    
 * January 2020: invited talk at NLPhD speaker series @ Saarland University. 
 * December 2020: invited talk at prof. Roi Reichart's group, Technion ([slides](https://docs.google.com/presentation/d/1ejNocno_l-L1PtCuZN9gYbrp6P8xRPJcd-pkEoB-eyk/edit?usp=sharing))
 * July 2020: presenting our [paper](https://www.aclweb.org/anthology/2020.acl-main.647/) (virtually) at ACL2020. 
