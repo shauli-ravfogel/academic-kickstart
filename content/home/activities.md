@@ -2,17 +2,15 @@
 # A Demo section created with the Blank widget.
 # Any elements can be added in the body: https://sourcethemes.com/academic/docs/writing-markdown-latex/
 # Add more sections by duplicating this file and customizing to your requirements.
-
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
-
 title = "Recent Activities"
 subtitle = ""
-
 +++
-* October 2025: I will attend the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the UK AISI Alignment Conference!
+* February 2026: Invited talk at the [Penn NLP](https://nlp.cis.upenn.edu/) group.
+* October 2025: Attended the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the UK AISI Alignment Conference (explainability track), followed by a visit at the [Cambridge NLP Lab](https://www.cl.cam.ac.uk/research/nl/).
 * Spring semester 2025: Teaching a new [course](https://docs.google.com/document/d/1OK9eL-du3RNQ2wcSiDLOpUJjYhehvwIEvP0IJHnFRv8/edit?usp=sharing) on causality and interpretability of LMs.
 * January 2025: Started as a Faculty Fellow at NYU Center of Data Science!
 * September - December 2024: Visiting at ETH Zurich.
