@@ -10,7 +10,7 @@ title = "Recent Activities"
 subtitle = ""
 +++
 * February 2026: Invited talk at the [Penn NLP](https://nlp.cis.upenn.edu/) group.
-* October 2025: Attended the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the UK AISI Alignment Conference (explainability track), followed by a visit at the [Cambridge NLP Lab](https://www.cl.cam.ac.uk/research/nl/).
+* October 2025: Attended the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the [UK AISI](https://www.aisi.gov.uk/) Alignment Conference (explainability track), followed by a visit at the [Cambridge NLP Lab](https://www.cl.cam.ac.uk/research/nl/).
 * Spring semester 2025: Teaching a new [course](https://docs.google.com/document/d/1OK9eL-du3RNQ2wcSiDLOpUJjYhehvwIEvP0IJHnFRv8/edit?usp=sharing) on causality and interpretability of LMs.
 * January 2025: Started as a Faculty Fellow at NYU Center of Data Science!
 * September - December 2024: Visiting at ETH Zurich.
