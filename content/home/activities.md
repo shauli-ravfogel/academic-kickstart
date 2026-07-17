@@ -9,6 +9,8 @@ weight = 20  # Order that this section will appear.
 title = "Recent Activities"
 subtitle = ""
 +++
+* July 2026: Invited talk at the [Theory of Interpretable AI Seminar](https://tverven.github.io/tiai-seminar/).
+* June 2026: Invited talk at the [Mila Tea Talks](https://mila.quebec/en/mila-tea-talks) seminar. 
 * February 2026: Invited talk at the [Penn NLP](https://nlp.cis.upenn.edu/) group.
 * October 2025: Attended the [Aspen meeting on Foundation Models](https://math.mit.edu/~rigollet/Aspen/) and the [UK AISI](https://www.aisi.gov.uk/) Alignment Conference (explainability track), followed by a visit at the [Cambridge NLP Lab](https://www.cl.cam.ac.uk/research/nl/).
 * Spring semester 2025: Teaching a new [course](https://docs.google.com/document/d/1OK9eL-du3RNQ2wcSiDLOpUJjYhehvwIEvP0IJHnFRv8/edit?usp=sharing) on causality and interpretability of LMs.
